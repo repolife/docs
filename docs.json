@@ -31,6 +31,7 @@
             "group": "Bible Reader",
             "pages": [
               "features/bible-reader",
+              "features/verse-study-panel",
               "features/bible-translations",
               "features/strongs-concordance",
               "features/interlinear",
