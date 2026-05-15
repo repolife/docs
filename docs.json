@@ -1,0 +1,72 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Seed Scroll",
+  "theme": "almond",
+  "colors": {
+    "primary": "#4E63C9",
+    "light": "#DDE3FF",
+    "dark": "#1E2559"
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/repolife/social-bible-app"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/download",
+              "getting-started/account-setup",
+              "getting-started/guest-mode"
+            ]
+          },
+          {
+            "group": "Bible Reader",
+            "pages": [
+              "features/bible-reader",
+              "features/strongs-concordance",
+              "features/interlinear",
+              "features/cross-references",
+              "features/search"
+            ]
+          },
+          {
+            "group": "Study Tools",
+            "pages": [
+              "features/study-notes",
+              "features/ai-study-generation",
+              "features/reading-plans",
+              "features/word-study",
+              "features/audio-transcription"
+            ]
+          },
+          {
+            "group": "Social & Community",
+            "pages": [
+              "features/social-feed",
+              "features/following",
+              "features/playlists-collections",
+              "features/notifications"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "pages": [
+              "account/profile",
+              "account/premium",
+              "account/reader-settings",
+              "account/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

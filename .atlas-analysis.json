@@ -1,0 +1,96 @@
+{
+  "projectType": "saas",
+  "projectName": "Seed Scroll",
+  "projectDescription": "A mobile Bible study app with Strong's concordance, interlinear text, AI-powered studies, reading plans, audio transcription, and a social feed for sharing study notes.",
+  "theme": "almond",
+  "primaryColor": "#4E63C9",
+  "lightColor": "#DDE3FF",
+  "darkColor": "#1E2559",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/download",
+              "getting-started/account-setup",
+              "getting-started/guest-mode"
+            ]
+          },
+          {
+            "group": "Bible Reader",
+            "pages": [
+              "features/bible-reader",
+              "features/strongs-concordance",
+              "features/interlinear",
+              "features/cross-references",
+              "features/search"
+            ]
+          },
+          {
+            "group": "Study Tools",
+            "pages": [
+              "features/study-notes",
+              "features/ai-study-generation",
+              "features/reading-plans",
+              "features/word-study",
+              "features/audio-transcription"
+            ]
+          },
+          {
+            "group": "Social & Community",
+            "pages": [
+              "features/social-feed",
+              "features/following",
+              "features/playlists-collections",
+              "features/notifications"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "pages": [
+              "account/profile",
+              "account/premium",
+              "account/reader-settings",
+              "account/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Offline-first Bible reader with KJV+ and Strong's number badges per word",
+    "Strong's Concordance — tap any word for Hebrew/Greek definition and transliteration",
+    "Interlinear view with original language text alongside English",
+    "Cross-references with local SQLite lookup",
+    "AI-powered word studies and deep-dives into original language words",
+    "Study notes with hashtag organization and verse tagging",
+    "AI-generated reading plans for any topic",
+    "Audio transcription using on-device Whisper",
+    "Social feed to follow other Bible students and share notes publicly",
+    "Dark/Light theme with system-aware switching",
+    "Web support via browser (sql.js WASM)",
+    "Monthly and annual premium subscriptions via RevenueCat"
+  ],
+  "publicApiSurface": [
+    "BibleReaderScreen — navigate by book, chapter, verse",
+    "Strong's panel — tap word badge to view definition, transliteration, pronunciation",
+    "Interlinear view — word-by-word original language with English",
+    "Cross-references screen — verse-to-verse connections",
+    "BibleSearchScreen — plain-language AI search",
+    "StudyNoteEditorScreen — create/edit notes with verse tags and hashtags",
+    "GenerateStudyScreen — AI study generation from text, file, image, or audio",
+    "GenerateReadingPlanScreen — AI reading plan creation",
+    "ReadingPlanDetailScreen — track daily reading progress",
+    "FeedScreen — social feed of public study notes",
+    "DiscoverScreen — find and follow other users",
+    "ProfileScreen — public profile with notes and plans",
+    "AudioPlayerSheet — background audio playback controls",
+    "PaywallScreen — premium subscription options (monthly/annual)",
+    "ReaderSettingsScreen — font size, color scheme, red-letter toggle"
+  ]
+}
