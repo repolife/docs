@@ -42,6 +42,7 @@
             "group": "Study Tools",
             "pages": [
               "features/study-notes",
+              "features/bookmarks",
               "features/ai-study-generation",
               "features/reading-plans",
               "features/word-study",
