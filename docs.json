@@ -31,6 +31,8 @@
             "group": "Bible Reader",
             "pages": [
               "features/bible-reader",
+              "features/verse-study-panel",
+              "features/bible-translations",
               "features/strongs-concordance",
               "features/interlinear",
               "features/cross-references",
@@ -41,6 +43,7 @@
             "group": "Study Tools",
             "pages": [
               "features/study-notes",
+              "features/bookmarks",
               "features/ai-study-generation",
               "features/reading-plans",
               "features/word-study",
