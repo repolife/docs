@@ -27,21 +27,73 @@ Reading plans give you a structured schedule for working through scripture. You 
 
 ## Import a reading plan
 
-Seed Scroll can turn structured reading schedules into editable plans.
+Seed Scroll can turn structured reading schedules into editable plans. Use this when you already have a church schedule, ministry PDF, spreadsheet, devotional calendar, or personal plan.
 
 Supported import paths include:
 
-| Import type | Best for |
-|-------------|----------|
-| Filled CSV template | Precise day-by-day schedules |
-| Pasted text or converted table text | Existing church, ministry, or fellowship plans |
-| Documents | PDFs, Word documents, text files, and markdown files |
+| Import type | Best for | Notes |
+|-------------|----------|-------|
+| Filled CSV template | Precise day-by-day schedules | Most reliable import path |
+| PDF | Existing printable reading schedules | Works best when the PDF has readable text or clear tables |
+| Word document | Plans drafted in a document editor | Supports `.doc` and `.docx` imports |
+| Plain text or markdown | Copied schedules, outlines, and exported notes | Good for simple day-by-day lists |
+| Pasted text | Quick conversion from a website, email, or message | Paste the schedule into the prompt field |
+
+### Import with the CSV template
+
+Use the CSV template when you want the most predictable result.
+
+<Steps>
+  <Step title="Download the template">
+    In the reading plan generator, choose the spreadsheet/template option and download `reading-plan-template.csv`.
+  </Step>
+  <Step title="Fill in plan details">
+    Add a plan title, optional description, and one row per passage.
+  </Step>
+  <Step title="Use Bible book numbers">
+    The template includes common book-number examples, such as Genesis `1`, Psalms `19`, John `43`, Romans `45`, and Revelation `66`.
+  </Step>
+  <Step title="Repeat days for multiple passages">
+    Use the same `day_number` on multiple rows when a day includes more than one passage.
+  </Step>
+  <Step title="Import and review">
+    Upload the completed CSV. Seed Scroll opens the plan editor so you can review every day before saving.
+  </Step>
+</Steps>
+
+CSV columns:
+
+| Column | Required | Description |
+|--------|----------|-------------|
+| `day_number` | Yes | The reading day number |
+| `day_title` | No | Optional title for the day |
+| `book` | Yes | Bible book number |
+| `chapter` | Yes | Chapter number |
+| `verse_start` | No | Starting verse for a partial-chapter reading |
+| `verse_end` | No | Ending verse for a partial-chapter reading |
+| `note` | No | Reflection prompt or day note |
+
+### Import from PDF or document
+
+For PDFs and documents, Seed Scroll extracts the reading schedule and converts it into days.
+
+Good source files usually have:
+
+- one reading day per row or paragraph
+- visible day numbers or dates
+- clear Bible references
+- minimal decorative layout
+- readable text instead of scanned images
 
 <Tip>
-  For complex PDFs, convert the PDF to text, markdown, or CSV first when possible. Table-based text is easier to parse than raw PDF layout.
+  For complex PDFs, export or copy the table to CSV, text, or markdown first when possible. Table-based text is easier to parse than raw PDF layout.
 </Tip>
 
-After import, Seed Scroll opens the plan editor so you can review each day before saving or publishing.
+<Warning>
+  Always review imported plans before saving or publishing. PDF layouts, scanned documents, and unusual abbreviations can cause missed or incorrect references.
+</Warning>
+
+After import, Seed Scroll opens the plan editor so you can correct titles, passages, verse ranges, and notes before starting the plan.
 
 ## AI-generated plans
 
