@@ -24,7 +24,8 @@
               "introduction",
               "getting-started/download",
               "getting-started/account-setup",
-              "getting-started/guest-mode"
+              "getting-started/guest-mode",
+              "getting-started/spanish-support"
             ]
           },
           {
@@ -33,6 +34,7 @@
               "features/bible-reader",
               "features/verse-study-panel",
               "features/bible-translations",
+              "features/bible-audio",
               "features/strongs-concordance",
               "features/interlinear",
               "features/cross-references",
@@ -65,6 +67,7 @@
               "account/profile",
               "account/premium",
               "account/reader-settings",
+              "account/study-preferences",
               "account/faq"
             ]
           }
