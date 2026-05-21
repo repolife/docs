@@ -22,6 +22,7 @@
             "group": "Get Started",
             "pages": [
               "introduction",
+              "changelog",
               "getting-started/download",
               "getting-started/account-setup",
               "getting-started/guest-mode",
