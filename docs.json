@@ -47,6 +47,7 @@
             "pages": [
               "features/study-notes",
               "features/bookmarks",
+              "features/saved-verse-images",
               "features/ai-study-generation",
               "features/reading-plans",
               "features/word-study",
