@@ -45,6 +45,7 @@
           {
             "group": "Study Tools",
             "pages": [
+              "features/studies-home",
               "features/study-notes",
               "features/bookmarks",
               "features/saved-verse-images",
