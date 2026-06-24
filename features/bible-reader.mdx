@@ -1,10 +1,12 @@
 ---
 title: 'Bible Reader'
-description: 'Read supported Bible translations offline with red-letter text, verse indicators, tablet annotations, and swipe navigation between chapters.'
-keywords: ['bible reader', 'KJV', 'WEB', 'RVR1909', 'BSB', 'navigation', 'red letter', 'chapters', 'offline', 'tablet annotations', 'stylus']
+description: 'Read supported Bible translations offline with Compare mode, red-letter text, verse indicators, tablet annotations, and swipe navigation between chapters.'
+keywords: ['bible reader', 'KJV', 'WEB', 'RVR1909', 'BSB', 'navigation', 'red letter', 'chapters', 'offline', 'compare mode', 'tablet annotations', 'stylus']
 ---
 
 The Bible Reader is the main screen in Seed Scroll. It supports KJV+, WEB, RV1909, and BSB reading, with translation-aware study tools for original-language exploration.
+
+Use Compare mode when you want to keep two passages visible side by side, such as comparing the same chapter in context with another passage.
 
 Supported Bible text is stored locally after install or download, so you can read without an internet connection.
 
@@ -25,6 +27,18 @@ Select a book, then a chapter, and optionally a specific verse to scroll directl
 When you open the picker, the book list starts in its default position. Use the **Old Testament** and **New Testament** quick-jump buttons to move between sections; the active button updates as you scroll.
 
 The picker validates the reference before navigating. If a chapter or verse is not valid for the selected book, Seed Scroll asks you to correct it first.
+
+### Compare two passages
+
+Tap the **Compare** button in the reader header to open a split-pane layout. The left pane keeps your primary reader passage, and the right pane opens a compare passage.
+
+Each pane has its own **Change** action for choosing a book and chapter. Use the bottom **Prev** and **Next** controls in each pane to move that pane through scripture without changing the other pane.
+
+Compare mode keeps both panes independently scrollable. When you change passages, skeleton rows hold the reading space in place while the next chapter loads.
+
+<Note>
+  Compare mode is a lightweight read-only reader layout. Verse study tools, immersive annotations, and stylus markup remain in the standard and immersive reader experiences.
+</Note>
 
 ### Listen to a chapter
 
@@ -76,6 +90,8 @@ Every time you read, Seed Scroll saves your position — book, chapter, and vers
 
 When red-letter mode is on, the words of Jesus appear in red. Toggle this in **Settings → Reader Settings**.
 
+Red-letter highlighting is range-aware, so partial verse ranges and terminal verse ranges can highlight only the words marked as spoken by Jesus.
+
 ### Dark and light theme
 
 The reader automatically follows your device's system appearance. You can override this in **Settings → Reader Settings** to lock it to either theme.
@@ -83,6 +99,10 @@ The reader automatically follows your device's system appearance. You can overri
 ### Text size
 
 Adjust the font size in **Settings → Reader Settings** to suit your reading preference. You can also pinch in or out directly in the reader to resize the Bible text while you are reading.
+
+### Immersive book mode
+
+Tap the immersive reader control to enter a distraction-free book-style layout. If Compare mode is open, Seed Scroll exits Compare mode first so immersive reading starts from a stable single-passage layout.
 
 ## Verse indicators
 
