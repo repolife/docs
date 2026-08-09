@@ -47,6 +47,39 @@ To save several results at once, tap the multi-select icon, choose the verses, t
 
 From **Cross-References**, you can bookmark one related verse or select several cross-references and apply the same bookmark label to all selected verses.
 
+## Verse bookmarks and translations
+
+A verse bookmark marks a **canonical verse reference** — book, chapter and verse — not a translation-specific copy of that verse. Bookmarking John 3:16 in KJV+ bookmarks John 3:16 itself.
+
+This has several consequences worth knowing:
+
+<AccordionGroup>
+  <Accordion title="The bookmark indicator follows you across translations">
+    A verse you bookmarked while reading one translation still shows as bookmarked when you read it in another. The indicator reflects the verse, not the translation you saved it from.
+  </Accordion>
+  <Accordion title="You cannot bookmark the same verse twice in different translations">
+    Because the bookmark is the canonical reference, saving a verse you already bookmarked in another translation does not create a second bookmark. There is one bookmark per verse.
+  </Accordion>
+  <Accordion title="The translation you saved from is remembered">
+    Each bookmark keeps the translation it was created in as saved-from metadata, and the wording as it read at the time is preserved on the bookmark card. Switching your reading translation does not rewrite what a saved bookmark shows.
+  </Accordion>
+  <Accordion title="Opening a bookmark returns you to its translation">
+    Opening a saved verse takes you to the reader in the translation the bookmark was saved from. If a bookmark has no saved-from translation recorded, the reader stays in whatever translation you are currently reading.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Bookmarks behave differently from highlights and other annotations tied to text positions. A canonical verse reference survives a translation change; a position inside a specific translation's wording does not.
+</Note>
+
+### What QA should expect
+
+- Bookmarking a verse in one translation shows the bookmark indicator on that verse in every translation.
+- Re-saving the same verse from a different translation does not produce a duplicate.
+- A bookmark card keeps the wording from the translation it was saved in, even after switching translations.
+- Opening a bookmark opens its saved-from translation.
+- Bookmarks created by older app versions, which stored the translation as part of the bookmark's identity, are read as canonical references and keep their original translation as saved-from metadata.
+
 ## Use bookmark labels
 
 Verse bookmarks can be grouped with colored hashtag labels such as **Key verse**, **Promise**, **Warning**, or your own custom labels.

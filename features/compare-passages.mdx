@@ -1,0 +1,62 @@
+---
+title: "Compare Passages"
+description: "Read two different passages side by side in a single translation."
+keywords: ["compare passages", "two pane", "parallel reading", "split view", "reader"]
+---
+
+Compare Passages opens a **two-pane reader** so you can read two different parts of scripture at once — Acts 8 beside Esther 1, for example. Both panes use the **same active translation**.
+
+<Note>
+  Compare Passages compares two *passages* in one translation. If you want to see one verse worded differently across several translations, use [Compare Translations](/features/compare-translations) instead. The two features are separate and open from different places.
+</Note>
+
+## Open Compare Passages
+
+Open compare mode from the **Bible Reader**. The reader splits into a primary pane and a comparison pane.
+
+When you first open it, the comparison pane starts on the same passage as the primary pane. Change it to whatever you want to read alongside.
+
+## Selecting each passage
+
+Each pane has its own reference picker and its own chapter navigation.
+
+- Tap a pane's reference to choose a different book and chapter for that pane only.
+- Each pane has its own next and previous chapter controls.
+- Each pane scrolls independently.
+
+Changing one pane never moves the other.
+
+## Changing the active translation
+
+Both panes always render the same translation — there is no way to put two translations side by side here. That is what [Compare Translations](/features/compare-translations) is for.
+
+When you change your active translation while comparing, **both passage references are preserved** and reloaded in the new translation.
+
+<Check>
+  Primary on Acts 8 and comparison on Esther 1, switching KJV+ to WEB, gives you Acts 8 and Esther 1 in WEB. The comparison pane does not reset to the primary passage.
+</Check>
+
+If you have not changed the comparison pane away from the primary passage, it continues to follow the primary passage on a translation change.
+
+## Leaving and returning
+
+Your comparison passage is kept while the reader stays open. Closing compare mode and reopening it brings your comparison passage back rather than resetting it to the primary passage.
+
+The comparison returns to the primary passage when the reader itself starts fresh — for example after restarting the app.
+
+### Opening a pane in the main reader
+
+Compare mode is a lightweight read-only layout, so verse study tools are not available inside it. Tap the open-out icon in either pane to open that passage as the main reader passage when you need to long-press a verse or use the [verse study panel](/features/verse-study-panel).
+
+Seed Scroll then shows a **Back to compare** action above the reader. Tapping it restores both the primary and comparison passages you had before.
+
+## What QA should expect
+
+- Both panes always show the same translation.
+- Each pane navigates and scrolls independently.
+- Changing translation preserves both references and reloads both in the new translation.
+- A comparison pane never silently reverts to the primary passage on a translation change.
+- Closing and reopening compare mode preserves the comparison passage.
+- **Back to compare** restores both passages after opening one pane in the main reader.
+
+For the reader mechanics of compare mode, see [Bible Reader](/features/bible-reader#compare-two-passages).
