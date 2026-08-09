@@ -32,6 +32,37 @@ Seed Scroll automatically decides whether your query needs AI or a standard keyw
 
 For shorter queries or exact phrases, Seed Scroll runs a fast local full-text search across the active supported translation. Results load from the on-device database when that translation is available offline.
 
+### Which text is searched
+
+Keyword search reads the text of your **currently active translation** only. It does not search other translations you own, and it does not search several translations at once.
+
+Switching translations does not re-run a search you have already performed. Run the search again to see results from the newly selected translation.
+
+### How results are ordered
+
+Results come back in two tiers:
+
+1. **Exact matches first.** Verses containing your search text as a whole-word match appear ahead of everything else.
+2. **Relevance within each tier.** Remaining results are ordered by full-text relevance, which weighs how distinctive your terms are and how often they occur.
+
+<Warning>
+  Results are **not** in canonical Bible order. A verse in Matthew can legitimately rank above a verse in Genesis when it is the stronger match. A result's position in the list is not a defect on its own.
+</Warning>
+
+Exact matching ignores punctuation. Apostrophes, quotation marks, hyphens, dashes, brackets and sentence punctuation are treated as word boundaries in both your query and the verse text, so `El'ayim` and `El ayim` behave identically. Matching is case-insensitive.
+
+Because matching is whole-word, searching `light` does not exact-match `lightning` — though relevance-ranked results below the exact tier may still include it.
+
+### Offline behavior
+
+Keyword and Strong's search run entirely on the device against the downloaded translation database, so both work with no network connection once a translation is installed.
+
+AI search requires a connection, because the query is processed remotely.
+
+### Licensed translations
+
+A licensed translation becomes searchable once it has been purchased **and** installed on the device. Owning one without downloading it on the current device leaves nothing locally to search.
+
 ## Strong's word search
 
 As you type, the search screen also surfaces matching **Strong's entries** — Hebrew and Greek words whose definitions match your query. Tap a Strong's result to see the full definition and a list of every verse where that word appears.
@@ -53,6 +84,8 @@ Each verse result gives you three paths:
 - Tap the **+ icon** to start a study from that verse. Choose **Manual** to create an editable study note with the verse already inserted, or choose **AI-generated** to draft a study from that reference.
 
 The reader opens the exact verse in the selected translation when available. Use the back button to return to your search results.
+
+Your query and its results are still there when you come back — opening a result does not clear the search. Results are only replaced when you enter a new query, and cleared when you empty the search box.
 
 ## Work with multiple results
 

@@ -36,6 +36,8 @@
               "features/bible-reader",
               "features/verse-study-panel",
               "features/bible-translations",
+              "features/compare-translations",
+              "features/compare-passages",
               "features/bible-audio",
               "features/strongs-concordance",
               "features/interlinear",
