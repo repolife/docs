@@ -3,6 +3,264 @@ title: "Changelog"
 description: "Recent Seed Scroll product updates."
 ---
 
+{/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.6.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/releases/tag/social-bible-app-v1.6.0
+   ============================================================================ */}
+
+{/*
+## August 13, 2026
+
+### Added
+
+(62 raw entries — rewrite as prose)
+
+- add Bible reader compare mode slice — 950b349
+- add chapter concordance references — 8729e77
+- add compare pane full-screen study mode — aed21bb
+- add controlled paid translation QA access — #490
+- add paid translation delivery and Cepher WTL integration — #489
+- add same-line immersive highlighter phrases — #438
+- add script font for verse images — 2785b59
+- annotation: add sticky immersive annotation chrome — a93e38d
+- app: say so when something has been deleted — #603
+- broaden plans discovery — 835347a
+- deeplinks: drive the link origin from EXPO_PUBLIC_WEB_URL — #525
+- discover: rebuild Discover as a curated landing page — #518
+- feed: add reading plans and content filters to the feed — #519
+- feed: let a followed creator's quick reflections reach the feed — #604
+- improve reading plan previews, depth, and reminders — #492
+- interlinear: explain omitted verses — 481809b
+- link chapter guide bible references — 931b6db
+- link profile to saved — #445
+- moderation: let people report a profile to the administrators — #590
+- moderation: let people report studies, plans and playlists — #591
+- notifications: tell people when their AI job finishes — #556
+- plans: add chronological whole Bible ordering — #480
+- plans: add configurable whole-Bible reading plans — #479
+- plans: add guided AI reading plan creation — #482
+- plans: come back to the day you were reading — #596
+- plans: export complete plans as PDF — #481
+- plans: gather day reflections somewhere they can be found — #598
+- plans: share reading plans by link, and show owners their visibility — #579
+- plans: show the day's assigned reading in the reader banner — #581
+- playlists: let people share a playlist and tell followers about it — #594
+- profile: say what the study count counts, and make it open them — #588
+- reader: find Yeshua's words in Spanish by Strong's number — #586
+- reader: fix immersive reading copy and introduce Compare Translations in the walkthrough — #563
+- reader: group translations by language in the picker — #517
+- reader: pair Cepher book names with English in the chapter heading — #553
+- reader: read WTL in the order and under the titles it prints — #595
+- reader: teach the verse tools and walk the nav bar left to right — #567
+- reader: unify verse copy and share behind one modal — #522
+- seecroll: Add tablet cross-reference split view — a528331
+- seedscroll: Add cloud sync for stylus annotations — edd670e
+- seedscroll: add full-page annotation OCR — 0d1e170
+- seedscroll: add semantic immersive annotation highlights — f8c0676
+- seedscroll: Book mode: printed-book typography (drop cap, ornament, page shadow) — 3e4aea5
+- seedscroll: Chapter concordance references — 9e111a1
+- seedscroll: Copy verse range — cbef32e
+- seedscroll: Desktop map rail — 07e6f19
+- seedscroll: Download study PDFs and add share to public studies — 6b8d2da
+- seedscroll: Enlarge web Strong's badge hit target — 3cf09f1
+- seedscroll: Getdavidvargas/annotation study note parsing — e58e79c
+- seedscroll: Getdavidvargas/fix public toggle outline — 8d494f1
+- seedscroll: Getdavidvargas/seed scroll passage verse images — eeda347
+- seedscroll: Getdavidvargas/seed scroll verse preview in creation flows — a2fc0da
+- seedscroll: Getdavidvargas/stylus annotation mvp — 3c79db4
+- seedscroll: Scroll to word study panel on badge tap — f83c871
+- seedscroll: Show study tools card by default in desktop reader rail — 2ab6c07
+- seedscroll: Show verse bookmark highlights across all translations — ecad00f
+- seedscroll: Support tablet landscape layout — ce009c7
+- seedscroll: Ultra reader (book) mode + book-mode bookmark highlights — 0462d89
+- seedscroll: Use study title for PDF filenames — d09fcf7
+- studies: add list and compact views to the studies library — #528
+- surface plan creation in plans tab — 95725b2
+- updates: enable OTA so JS-only fixes stop needing a store build — #578
+
+### Fixed
+
+(162 raw entries — rewrite as prose)
+
+- address copy verse range review — 9da80e6
+- address nav restore review — 49b5564
+- ai-studies: accept Cepher WTL as a study generation translation — #550
+- ai: retry incomplete chapter guides — #474
+- ai: support long YouTube studies — #477
+- align tablet annotation hit tests — 5fb18ac
+- android: add the FCM client config that release builds require — #561
+- android: allow tablet landscape — 6f2cf48
+- android: wire Firebase so push can work once credentials land — #558
+- app: align mobile tutorial overlays — #501
+- app: align the Bible reader walkthrough across devices — #513
+- app: clear chapter guide input on navigation — #488
+- app: don't read navigation state before the navigator mounts — #566
+- app: localize Spanish AI study divine names — #487
+- app: reconcile Cepher purchases before download — #497
+- app: replay reader onboarding reliably — #502
+- app: restore owned Android translations — #498
+- app: stop auth churn from replaying the reader walkthrough — #562
+- app: stop onboarding replay from clearing the seen flag — #515
+- app: stop restoring another user's profile a day later — #570
+- app: wrap multi-word BSB tokens on Android — #499
+- avoid duplicate compact reaction buttons — 23e3d50
+- bookmarks: drop the temp table from the verse bookmark migration — #539
+- bookmarks: keep a saved chapter bookmarked across translations — #542
+- bookmarks: keep a saved verse bookmarked across translations — #538
+- bookmarks: stabilize Android hashtag modal — 0c03373
+- bsb: address DB review findings — 348854d
+- bsb: correct token integrity issues — #500
+- bsb: harden review follow-ups — 63d3863
+- bsb: restore missing psalm openings — 1cb8e7d
+- cepher: link Yahusha to Strong's names — #506
+- cepher: restore Yeshua red-letter rendering — #508
+- chapter-guide: filter model thoughts — 1f23279
+- chapter-guide: prevent truncated answers — bc31589
+- clarify Cepher WTL display name — #494
+- compare: keep the pane labels on one line — #524
+- compare: keep the secondary passage when the translation changes — #534
+- compare: offer installed licensed translations in Compare Translations — #533
+- complete red-letter spans — #441
+- db: fail a stalled download instead of spinning, and name the phase — #569
+- db: version each database on its own so one change re-downloads one file — #568
+- deeplinks: trust dev-server origins in development builds — #523
+- deliver publication push notifications — #476
+- even bottom nav spacing — 6d50029
+- exclude followed plans before discovery limit — 3a63fe9
+- feed: order Feed and Discover by publication, not last edit — #520
+- flatten compact plan like button — c5045ea
+- harden BSB database downloads — b1857e0
+- hide compact plan heart pill — f0b19af
+- hide positive verse image status on validation error — #442
+- highlighter: hit-test preview bounds — 3e78f64
+- i18n: localize the AI study editing panel — #551
+- include 10-inch android tablets — 9bb9fdc
+- interlinear: address review feedback — 4b3dae3
+- ios: track the iOS app target so its versions stop shipping from a laptop — #583
+- keep plans visible during refresh — #493
+- label plans tab — 0f9bc09
+- make desktop copy range selector scrollable — 5e8cebb
+- moderation: actually apply the content report function to the database — #592
+- nav: label plans tab — ac425d8
+- nav: return every tab to its home screen when pressed while focused — #527
+- notifications: give a push token exactly one owner — #572
+- notifications: post pushes to Expo's real endpoint — #555
+- notifications: title social pushes with Seed Scroll, not the old app name — #589
+- offset plans content below status bar — 1b1849d
+- pdf: close export branch — 82c1136
+- pdf: harden filename sanitization — b4ddaa1
+- pdf: use study title for filename — 2495820
+- plans: keep reading plan cards content-sized — #505
+- plans: open plan after enrollment — #504
+- plans: preserve full duration in AI descriptions — #483
+- plans: prevent publishing empty reading plans — #503
+- plans: reconcile scheduled reminders with UI state — #484
+- plans: stop AI reading plans failing with a raw edge-function error — #580
+- plans: stop the reader flickering, and keep the reflection where the reading is — #602
+- playlists: order public playlists by publication, not last edit — #526
+- playlists: remove dead like methods querying a nonexistent table — #529
+- preserve Android verse spacing — #444
+- preserve RevenueCat identity for Cepher purchases — #495
+- prevent reversed copy verse ranges — a6698e0
+- prioritize studies in bottom nav — ff3f9eb
+- purchases: let people buy without creating an account — #557
+- purchases: stop making an account the price of reaching Pro — #597
+- purchases: stop the client granting itself Pro — #559
+- reader: acknowledge a chapter tap the moment it lands — #584
+- reader: anchor the walkthrough to what it is pointing at — #554
+- reader: initialize Android reference picker scroll — #509
+- reader: install bundled BSB db — fafac27
+- reader: keep the reader's verse when switching translation — #521
+- reader: keep the walkthrough on Genesis 1 when a saved reading position races it — #571
+- reader: open a verse study panel with its verse on screen — #545
+- reader: open the immersive view at the verse actually on screen — #537
+- reader: open the immersive view on the verse the reader is looking at — #544
+- reader: point the walkthrough at Compare Passages, not Compare Translations — #564
+- reader: prevent highlighter text tint — b7e840d
+- reader: recover WEB Strong's dots the forward walk steps past — #587
+- reader: remove the redundant Go button from the reference picker — #516
+- reader: restore the stored translation instead of a stale route param — #536
+- reader: stop laying KJV word positions over other translations — #585
+- reader: theme Strong's note chooser — #478
+- reader: unlock the reference picker's book list on open — #552
+- reader: unstick the walkthrough — Next on every step, Skip always, Compare Passages spotlighted — #565
+- reading-plans: make the editor open and save a whole-Bible plan — #547
+- reading-plans: open the new plan after creating one — #543
+- reading-plans: require a day before a plan can be saved at all — #549
+- reading-plans: stop filing a brand new empty plan under Completed — #548
+- refresh bookmark dog-ear after save — #440
+- release: give the app one version, and let EAS own build numbers — #560
+- remove desktop rail drag resize affordance — 4b4a176
+- remove plans from studies tabs — 631e9eb
+- respect verse image footer inset — f8d536b
+- restore immersive highlighter — 17e04ce
+- restore immersive pen drawing — #439
+- restore tablet annotation hit testing — 06d2bc2
+- scroll desktop map rail on dev — c6ae340
+- search: cap chapter evidence score — 3f73a7b
+- search: include full chapter AI evidence — c2bf866
+- search: rank chapter AI evidence — bdd14fe
+- search: reuse chapter match evidence — c240c4b
+- search: surface near spellings when a Bible search finds nothing — #540
+- seedscroll: align highlighter preview hit-tests — 8ab4ec2
+- seedscroll: Android release build: AGP 8.11.1 for Gradle 8.14.3 — 685045d
+- seedscroll: Android view-shot release variant — f1b5dcc
+- seedscroll: Bible reader position restore on reopen — #496
+- seedscroll: desktop interlinear overflow — b9f3228
+- seedscroll: Fix missing BSB Psalm openings — dcb8b31
+- seedscroll: Getdavidvargas/fix public toggle outline — d4de8f2
+- seedscroll: Getdavidvargas/fix reader theme scroll origin dev — 604a5b3
+- seedscroll: improve long passage verse image layout — 5244258
+- seedscroll: polish verse image editor controls — 3369709
+- seedscroll: prevent reversed copy verse ranges — 72d7c69
+- seedscroll: reader theme and verse one scroll — 70ad3c1
+- seedscroll: remove desktop rail drag resize affordance — 894b5aa
+- seedscroll: scroll desktop map rail on dev — 96c4fe2
+- seedscroll: YouTube transcript 429 fallback — 1734e1f
+- show feed in bottom nav — e56a571
+- stabilize immersive highlight rendering — 8fc06d1
+- stabilize immersive highlighter QA — #437
+- stabilize verse image and compare flows — 7a32fdf
+- strongs: keep a word study attached to the verse it came from — #576
+- strongs: keep detail page titles concise — #512
+- studies: address URL parser review — 830aab5
+- studies: canonicalize YouTube URLs — f1e6495
+- studies: share canonical URL builder — 2da9717
+- studies: stop quick reflections being the one thing we cannot give back — #601
+- studies: stop the full quick reflections list calling itself recent — #600
+- sync: scope note sync's local_id matching to the device that wrote it — #532
+- transcription: address recording review feedback — 62fb49e
+- transcription: improve offline recording reliability — fd65874
+- translations: keep a downloaded licensed translation usable offline — #535
+- update Android verse image font preview — #443
+- updates: set the runtime version literally, as bare projects require — #582
+- verse-image: let the chosen font render, and keep the editor after Share — #574
+- verse-images: export the composition the preview showed — #546
+- verse-images: identify the translation and credit Cepher WTL — #541
+- video: address review feedback — b323008
+- video: contain URL input text — 9f6faef
+- video: fall back on transcript 429 — 20deafb
+- web: let React Navigation own the URL on web — #531
+- wtl: preserve inline Hebrew and punctuation — #511
+- wtl: render inline Hebrew with a bundled font — #514
+- wtl: structure Psalm 119 acrostic headings — #510
+
+*/}
 ## August 5–10, 2026
 
 ### Added
