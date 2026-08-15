@@ -3,38 +3,31 @@ title: "Changelog"
 description: "Recent Seed Scroll product updates."
 ---
 
-{/* ============================================================================
-   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.7.1; rewrite it, then delete this block.
+## August 13–15, 2026
 
-   Everything below is inside an MDX comment, so none of it renders. That is on
-   purpose: this is raw material, not copy. The entries are Conventional Commit
-   subjects written for developers. The page around them is prose written for
-   readers — full sentences, saying what a person can now do. Do not paste these
-   through.
+### Added
 
-   To finish it:
-     1. Check the date range below is the one you want.
-     2. Rewrite the entries you would tell a reader about as prose, under the
-        Added / Improved / Fixed headings, matching the sections beneath.
-     3. Drop anything internal — most refactors, most CI, anything a reader
-        cannot see.
-     4. Move the finished section above this block and delete the block.
+- Added **collections for saved studies**. Create a named collection in Saved — Marriage, Torah, Studies to revisit — give it a description if the name is not enough on its own, and file saved studies into it. A study can sit in as many collections as you like without being copied, and collections are private: the person who wrote a study never sees that you saved it or what you called the collection it went into.
+- Added an **Add to collection** action to the confirmation shown when you save a study, so a study can be filed the moment you save it rather than hunted down later.
+- Added an **Add studies** button inside a collection, so one you have just created can be filled without leaving it.
 
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.7.0...social-bible-app-v1.7.1
-   ============================================================================ */}
+### Improved
 
-{/*
-## August 14, 2026
+- Improved the Saved screen. **All Saved Studies** now stays listed even when empty, so the place saved studies live is always where you left it. Each collection shows its description and how much is in it, and its icon reflects what it holds — a mortarboard for studies, an open book for verses.
+- Improved rows inside a collection so each says what it is: your own study, a study saved from another reader, a Bible verse, or a chapter.
+- Improved collection names. Blank names, names longer than the field can show, and names you already have are refused with a reason under the field instead of a failure after the fact.
+- Improved deleting a collection so it only unfiles. The studies inside stay saved under All Saved Studies, and removing a study from one collection leaves it in every other.
+- Improved the confirmation shown after deleting. It is centred, and it says what happened in full — **Reading plan has been deleted** rather than *Reading plan deleted*. Removing a bookmark still says **Bookmark removed**, because a bookmark is removed rather than destroyed.
+- Improved **The Way, the Truth & the Life** so it is read under the names its own edition prints. The book picker shows the publisher's common name with the printed title beneath it — Tehilliym above The Psalms — across three columns rather than one long list, and the reader header leads with the printed title.
 
 ### Fixed
 
-(3 raw entries — rewrite as prose)
+- Fixed a republished Spanish **RVR1909** never reaching readers who already had the older copy, and a public translation going stale when no bundled copy existed to fall back on.
+- Fixed the search icon sliding off the reader header when the book name ran long.
+- Fixed the chapter grid collapsing to a single row on shorter screens, which put later chapters out of reach.
+- Fixed walkthrough steps highlighting empty space where a button was expected.
+- Fixed collections and their descriptions staying on the device that made them. They now travel with your account, including collections you have not filed anything into yet, and deleting or renaming one on one device carries to the rest instead of coming back on the next sign-in.
 
-- ci: ask the API whether a release tag is on main — d8271a6
-- ci: promote the release pipeline fixes — e5b45c8
-- ci: push the release tag with a token that can trigger the build — 0dcc7f1
-
-*/}
 ## August 5–10, 2026
 
 ### Added
