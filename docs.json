@@ -63,6 +63,7 @@
             "pages": [
               "features/social-feed",
               "features/following",
+              "features/reporting-and-blocking",
               "features/playlists-collections",
               "features/notifications"
             ]
