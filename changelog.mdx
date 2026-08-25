@@ -3,171 +3,62 @@ title: "Changelog"
 description: "Recent Seed Scroll product updates."
 ---
 
-{/* ============================================================================
-   DRAFTS — NOT PUBLISHED. One block per release that has shipped but has not
-   been written up yet, newest first. Rewrite them, then delete each block.
-
-   Everything below is inside MDX comments, so none of it renders. That is on
-   purpose: this is raw material, not copy. The entries are Conventional Commit
-   subjects written for developers. The page around them is prose written for
-   readers — full sentences, saying what a person can now do. Do not paste these
-   through.
-
-   To finish one:
-     1. Check the date range on the block is the one you want.
-     2. Rewrite the entries you would tell a reader about as prose, under the
-        Added / Improved / Fixed headings, matching the sections beneath.
-     3. Drop anything internal — most refactors, most CI, anything a reader
-        cannot see.
-     4. Move the finished section above this header and delete the block.
-
-   The release job inserts each new draft directly under the frontmatter,
-   above this header. Leave it there and let the list grow. Two drafts in
-   flight still conflict in git, at exactly this spot — resolve that by
-   keeping both sides. Taking one side whole is what lost the v1.8.0 draft
-   between 2026-08-16 and 2026-08-25; it survived only in commit 93821fe.
-   ============================================================================ */}
-
-{/* ---- draft: social-bible-app-v1.11.1 ----
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.11.0...social-bible-app-v1.11.1
-*/}
-
-{/*
-## August 24, 2026
-
-### Fixed
-
-(1 raw entry — rewrite as prose)
-
-- ci: give the release the node eas-cli now needs — 2e217d4
-*/}
-
-{/* ---- draft: social-bible-app-v1.11.0 ----
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.10.0...social-bible-app-v1.11.0
-*/}
-
-{/*
 ## August 20–24, 2026
 
-### Added
+### Improved
 
-(5 raw entries — rewrite as prose)
-
-- auth: give password reset and email change the same design — 10ccbf7
-- auth: give the signup confirmation email a Seed Scroll design — f0c3833
-- auth: push the confirmation template without pushing the whole config — 032423e
-- bundled-text startup, deeplink cold start, auth email design, and red-letter boundaries — 812eb90
-- marketing: build the waitlist launch announcement — 1179814
+- Improved the purchase screen for licensed translations so it names each phase of the work after the download finishes. Checking and installing used to run under **Downloading… 100%** for around twenty seconds, which read as a hang. The label now follows the work, and the bar stops reporting a percentage once there are no bytes left to count.
+- Improved the emails Seed Scroll sends about your account. Signup confirmation, password reset, and email change now share one design — the brand palette, a single clear action, and the link repeated as readable text underneath so a blocked button is never a dead end. All three are legible in dark mode. An email-change message names the address it is changing to, because it arrives at the old inbox and the new one alike.
+- Improved the Hebrew letter card in the Strong's definition modal. It now draws the letter's Proto-Sinaitic glyph in the same treatment the word study panel uses, rather than a system emoji that every platform redraws its own way.
 
 ### Fixed
 
-(18 raw entries — rewrite as prose)
+- Fixed a cold start that could sit on the launch screen and, on iOS, be closed by the system before the app opened. Everything the reader needed arrived over the network first — around 110MB, in series — and no verse rendered until all of it landed. Bible text now comes with the app, so a first launch reaches a readable chapter without touching the network at all. Strong's, cross-reference, and interlinear data install afterwards, one at a time, and a screen whose data has not arrived yet shows its progress instead of an error.
+- Fixed the verse study panel staying empty for a long time on a new install. Strong's data is the smallest of the three background installs, but it was waiting for the other two to finish first. The panel now waits only on what it needs, moves that to the front of the queue, and shows progress while it arrives — what you have open decides what installs next.
+- Fixed a shared link being replaced by an older notification when it opened the app from cold. Whichever of the two arrived first used to decide where you landed.
+- Fixed a translation you had just bought going missing from the translation picker for up to twenty-five seconds after it finished installing. The picker no longer waits on the store before listing what is already on your device.
+- Fixed shared links naming **Cepher WTL** as only "WTL". A shared link is opened by someone who did not choose the translation, so licensed editions are now written out in full. Public translations keep the short labels readers recognise.
+- Fixed gold running past the close of a quotation and into the narration after it in **WEB**. Matthew 8:26 gave the narrator's "Then" to Yeshua, and 9:22 and 9:24 took words that follow the quotation.
+- Fixed the signup alert on iOS wrapping so that the sentence's full stop was stranded at the start of the next line, away from the address it followed.
 
-- auth: keep the period attached to the address on the confirm-email alert — 5d98c8d
-- auth: restore the recovery and email_change templates dev never received — 794711a
-- deeplinks: settle the cold-start race instead of ordering its winners — c9f620a
-- deeplinks: stop a stale push tap swallowing a shared link — f41f588
-- licensed: name the verify and install phases on the purchase screen — 6a1796b
-- marketing: give duplicate submissions a total order — 678836c
-- marketing: make the waitlist export deterministic and self-cleaning — 9d0ed23
-- picker: stop store lookups from hiding an installed translation — 33a3558
-- reader: end Yeshua's gold where the quotation closes — a984316
-- reader: stop one background database waiting behind the whole queue — b17810a
-- share: name the Cepher edition on shared links, not just "WTL" — 89bd885
-- share: require sound passage coordinates before rebuilding a reference — ae8e61e
-- startup: call the bundled install an install, not a download — e10e6bb
-- startup: create the SQLite directory before the bundled copy runs — 6cbeac9
-- startup: keep the deferred installs honest about what is missing — 78ca2cc
-- startup: open the reader on bundled text instead of a 110MB download — bc3d77c
-- strongs: draw the Hebrew letter card with its Proto-Sinaitic glyph — e6396cc
-- wtl: name the install phases and stop the picker hiding an installed translation — 6c8be79
-*/}
-
-{/* ---- draft: social-bible-app-v1.10.0 ----
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.9.0...social-bible-app-v1.10.0
-*/}
-
-{/*
 ## August 19–20, 2026
 
-### Added
+### Improved
 
-(2 raw entries — rewrite as prose)
-
-- reading-plans: render a generated day note as sections, not one block — 8e85ac3
-- share: attribute the card, and give its image alt text — 85744e5
+- Improved the daily notes in AI-generated reading plans. A generated note used to arrive as one unbroken paragraph with its labels — Context, Key insight, Application, Reflect — buried in the sentences. Each is now a heading of its own, and **Reflect** sits apart at the foot of the note, where it hands off to your own reflection directly beneath it. Plans generated before this change read the new way too, and nothing you had saved was rewritten.
+- Improved link previews for shared Seed Scroll links. A preview card now credits the account that shared it and describes its image for anyone reading with a screen reader.
 
 ### Fixed
 
-(4 raw entries — rewrite as prose)
+- Fixed account deletion requests that could be closed without the account being deleted. A request that cannot be matched is now kept for another attempt.
 
-- account-deletion: read past the first page of accounts, and run the tests — a97b0aa
-- account-deletion: reject an unreadable user list instead of reading it as empty — 7c5a176
-- apply CodeRabbit auto-fixes — b3fcd18
-- share: finish the card on the other two templates — 00fb9d6
-*/}
-
-{/* ---- draft: social-bible-app-v1.9.0 ----
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.8.0...social-bible-app-v1.9.0
-*/}
-
-{/*
 ## August 16–19, 2026
 
 ### Added
 
-(3 raw entries — rewrite as prose)
+- Added **shareable links for verse images**. **Share** still hands over an image file that never leaves your phone. **Share link** publishes a copy and gives you an address anyone can open, whether or not they have Seed Scroll. You can unshare a link afterwards, which deletes the published copy.
+- Added a confirmation when you save a verse image. It names where the image went — **Studies → Verse images** — and offers to open it, instead of closing the editor without a word.
 
-- shareable verse-image links, reference-aware picker, and release automation — 81638ed
-- verse-images: give a verse image a public link — #654
-- verse-images: say where a saved image went, and offer to open it — #656
+### Improved
+
+- Improved the reader header so that book, chapter, and verse each open the step they name. The chapter number opens that book's chapter grid with your current chapter highlighted, the verse number opens the verses of the chapter you are in, and the book name opens the list on your own testament with your book already scrolled into view. All three used to open the same list at Genesis.
+- Improved playlist visibility. The overview now shows it as a badge you can read but not change, and the pencil opens **Edit Playlist**, where studies and reading plans already keep it. Publishing or unpublishing is no longer one stray tap on the screen you open to listen. Playlist and reading plan badges are both read out in full by a screen reader.
 
 ### Fixed
 
-(10 raw entries — rewrite as prose)
+- Fixed publishing an audio playlist failing with an error, and the same fault silently abandoning a note copy.
+- Fixed **WEB** giving Yeshua words from the narration that introduces his speech. Matthew 9:2 set "said to the paralytic," in gold, and Matthew 8:4 put "to" in his mouth.
+- Fixed shared verse links losing the translation they were shared from. A link now carries it, so one shared from **RV1909** opens in RV1909 and names the passage as Juan 5:6-8 rather than John 5:6-8 over Spanish scripture. A link to a licensed translation you do not own takes you to that translation's screen with the passage, rather than quietly showing you different text. Links shared before this change carry no translation and open as they always have.
 
-- ci: stop the CodeRabbit config re-enabling review on release PRs — 038d677
-- db: allow playlist_publish and note_copy notification types — #646
-- deps: bump Expo SDK 54 packages to the expected patches — 387f1d3
-- netlify: stop a generated module from failing the build as a function — #655
-- netlify: stop the two sites crossing configuration — #649
-- playlists: report visibility on the overview, change it in Edit — #653
-- reader: open the picker at the reference the reader tapped — #650
-- reader: stop Yeshua's words spilling into narration — #648
-- release: dev to main (v1.8.0)Main — 6e392a9
-- share: keep the sender's translation and its book names in shared links — #652
-*/}
-
-{/* ---- draft: social-bible-app-v1.8.0 ----
-   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.7.1...social-bible-app-v1.8.0
-*/}
-
-{/*
 ## August 14–16, 2026
 
 ### Added
 
-(3 raw entries — rewrite as prose)
-
-- moderation: block accounts, fix nested-quote rendering, and answer App Review [SEE-663, SEE-665, SEE-666] — b012478
-- moderation: let users block accounts — 5e95f27
-- moderation: let users block accounts [SEE-665, SEE-666] — ec06e0b
+- Added **blocking**. Block an account from any study, verse note, reading plan, or playlist it wrote. The confirmation states every consequence before you agree to it: you stop seeing their studies, verse notes, reading plans, and playlists and they stop seeing yours, any follow between you is removed, notifications between you are deleted, and they are not told they have been blocked. **Blocked accounts** in Reader Settings lists everyone you have blocked and the date it happened, and you can unblock at any time — which restores what the two of you can see of each other, but not the follow.
 
 ### Fixed
 
-(10 raw entries — rewrite as prose)
-
-- ci: draft the changelog from the last release that shipped — #633
-- ios: drop the unjustified Face ID purpose string — a9a0b51
-- moderation: close the definer path and sweep block residue — 73b55e2
-- moderation: close the notification and push path after a block — d97a6e0
-- moderation: stop a stale block-state read from undoing a block — 9e5f013
-- reader: separate nested quotation marks so each one reads — 1ba5322
-- reader: separate nested quotation marks so each one reads [SEE-663] — dcb3e9b
-- release: keep the two package versions in step — #631
-- release: merge main back into dev after the 1.7.1 release — 064b23c
-- release: put app back in step with the released version — #634
-*/}
+- Fixed nested quotation marks reading as fewer marks than scripture has. Where a quotation opens inside a quotation — Ezekiel 6:8 in **WEB** opens three — the marks were set flush against each other and merged. A hair space now separates them, so each mark reads on its own while the group stays one cluster.
 
 ## August 13–15, 2026
 
