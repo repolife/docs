@@ -1,0 +1,91 @@
+---
+title: "AI Connections"
+description: "Let Claude or ChatGPT read and add to your own bookmarks, study notes, and reading plans."
+---
+
+AI Connections lets an AI assistant you already use work inside your Seed Scroll library. Once connected, you can ask Claude or ChatGPT to find a note you wrote, pull together the verses you bookmarked on a theme, draft a study, or lay out a reading plan, and the result lands in Seed Scroll as your own content.
+
+<Note>
+  Connecting an assistant is a premium feature. If your subscription lapses, the assistant stops on its next request and reconnects once you subscribe again.
+</Note>
+
+## What a connected assistant can do
+
+The assistant works only with content that belongs to you:
+
+| Read | Create |
+|------|--------|
+| List and search your bookmarks | Bookmark a verse, with an optional hallmark and note |
+| List, search, and open your study notes | Write a study note with your commentary and the verses it draws on, in reading order |
+| List and search your reading plans | Build a reading plan, one chapter per day, with optional notes |
+
+Everything it creates is private and appears in the app like anything you wrote yourself. It does not carry the AI-assisted label, because Seed Scroll did not generate it.
+
+## What it cannot do
+
+- See your community posts, your followers, or anyone else's content
+- Publish, share, or post anything
+- Edit or delete existing notes, bookmarks, or plans
+- Sign in as you anywhere else. The assistant holds a key to these actions only, never your password or your session.
+
+Seed Scroll also caps how much an assistant can create in an hour, so a runaway conversation cannot flood your library.
+
+## Connect from Claude
+
+<Steps>
+  <Step title="Add the connector">
+    In Claude, open **Customize** → **Connectors** → **Add custom connector** and paste this URL:
+
+    ```
+    https://mcp.seedscroll.app/mcp
+    ```
+  </Step>
+  <Step title="Sign in to Seed Scroll">
+    Claude opens a Seed Scroll page that names the assistant asking and where it will return you. Sign in the way you sign in to the app: **Continue with Google**, **Continue with Apple**, or your email and password. Your password goes to Seed Scroll only, never to Claude.
+  </Step>
+  <Step title="Use it in a chat">
+    Claude asks before running a Seed Scroll action until you choose **Always allow** for it. Try: "Find my notes about wisdom" or "Bookmark Psalm 23:1 as a key verse."
+  </Step>
+</Steps>
+
+## Connect from ChatGPT
+
+<Steps>
+  <Step title="Turn on Developer mode">
+    Custom connectors in ChatGPT require **Developer mode**: open **Settings** → **Security** and switch it on.
+  </Step>
+  <Step title="Create the app">
+    Open **Settings** → **Plugins** (some accounts show **Apps** or **Connectors**), choose **Create**, give it a name such as "Seed Scroll", and paste this URL in the server URL field:
+
+    ```
+    https://mcp.seedscroll.app/mcp
+    ```
+
+    Leave authentication set to **OAuth**. Accept the notice that ChatGPT has not reviewed the connector and create it.
+  </Step>
+  <Step title="Sign in to Seed Scroll">
+    ChatGPT opens the same Seed Scroll sign-in page. Use **Continue with Google**, **Continue with Apple**, or your email and password.
+  </Step>
+  <Step title="Use it in a chat">
+    Start a new chat and mention Seed Scroll, or attach it from the **+** menu. ChatGPT labels the three create actions as writes and may ask before running them.
+  </Step>
+</Steps>
+
+<Tip>
+  ChatGPT remembers what a connector can do from the moment you connected it. If Seed Scroll adds an action later and ChatGPT does not see it, open the connector in **Settings** → **Plugins**, tap **⋯**, and choose **Refresh**.
+</Tip>
+
+## See and disconnect your connections
+
+On the web app, open **Profile** → **Reader Settings** → **AI Connections**. Each assistant you have connected is listed with the date you connected it. Tap **Disconnect** to cut it off; the assistant loses access on its next request, even if you never remove it on the assistant's side.
+
+{/* Add "and in the mobile app" once a store release carries the AI Connections screen. */}
+
+You can also disconnect from the assistant itself: in Claude, open the connector and choose **Disconnect**; in ChatGPT, open the app under **Settings** → **Plugins**, tap **⋯**, and choose **Disconnect**.
+
+## Sign-in troubleshooting
+
+- **"Invalid login credentials"**: you signed up with Google or Apple and have no password. Use **Continue with Google** or **Continue with Apple** instead.
+- **"That sign-in didn't start here"**: the sign-in page was opened from a link rather than from the assistant. Start again from Claude or ChatGPT.
+- **"Seed Scroll doesn't recognise this assistant"**: the connector URL was mistyped, or the assistant is not one Seed Scroll can accept. Check the URL and try again.
+- **The assistant says it is not premium**: connecting needs an active premium subscription on the account you signed in with. See [Premium](/account/premium).
