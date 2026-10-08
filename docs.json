@@ -41,7 +41,8 @@
               "features/strongs-concordance",
               "features/interlinear",
               "features/cross-references",
-              "features/search"
+              "features/search",
+              "features/atlas"
             ]
           },
           {
