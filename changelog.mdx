@@ -3,6 +3,163 @@ title: "Changelog"
 description: "Recent Seed Scroll product updates."
 ---
 
+{/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.23.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.22.0...social-bible-app-v1.23.0
+   ============================================================================ */}
+
+{/*
+## September 27–October 8, 2026
+
+### Added
+
+(40 raw entries — rewrite as prose)
+
+- activity: record study views, plan views, playlist plays and chapters read for suggestions (SEE-1016) — 20ea319
+- ai: a judgment seam, and a citation check on generated studies (SEE-943) — 3d22637
+- analytics: Feed and Discover events, and a source on every paywall entry point (SEE-1014) — d14d097
+- audio: a Downloads screen to see and free Audio Bible space (SEE-1038) — e1bf21c
+- audio: download a chapter from the player sheet (SEE-1038) — c16b6fd
+- audio: say "no connection" instead of an audio error, and offer a saved chapter (SEE-1038) — 79f5718
+- audio: take a whole book, plan days or a testament offline (SEE-1038) — b8669e0
+- bookmarks: a passage saved in one action is one entry (SEE-1020) — bc08557
+- bookmarks: No label first, and one "Add to collection" button — 8720d4c
+- bookmarks: the save toast offers "Add to collection" — e5cfe37
+- collections: create a study from the selected verses (SEE-1021) — f91213f
+- collections: drag bookmarks into your own order (SEE-991) — 8e588ea
+- collections: multi-select remove and reorder, recovered onto dev (SEE-992, SEE-991) — f2b3b65
+- collections: select several bookmarks and remove them at once (SEE-992) — 9160d5b
+- db: a preview view over public studies for free readers (SEE-1015, 1 of 3) — 346165a
+- db: a preview view over public studies for free readers (SEE-1015) — 114493a
+- db: lock other people's study text to Premium readers (SEE-1015, 3 of 3) — d6b6946
+- db: lock other people's study text to Premium readers (SEE-1015) — e4bd0af
+- discover: For You and People to follow rows (SEE-1019) — 281facb
+- discover: For You and suggested-follows RPCs (SEE-1017) — 292f74d
+- discover: rank trending plans and playlists by decayed engagement (SEE-1034) — de28f8d
+- plans: free readers see a preview of other people's plans (SEE-1031) — c8a48d3
+- reader: mark the book-mode button when the chapter has annotations (SEE-900) — 2ffdf9e
+- restatement: Enoch, Jubilees and the other 22 books in search, AI search and studies (SEE-978) — 0098b10
+- restatement: point the catalog at the file with acrostic letters on their own verse (SEE-1009) — 75e5641
+- restatement: point the catalog at the release file with WTL's Strong's (SEE-1005) — 98c83a8
+- restatement: read Strong's tokens for books 67-90 when the file has them (SEE-1006) — e0b5b5b
+- search: show likely verses while AI search runs (SEE-1044) — fe21bf7
+- site: ancient map of Israel images and a looping hero on the Atlas page — 67fb7e7
+- site: map of ancient Israel landing page, and the Atlas and new editions in the offering — ab2918e
+- site: map of ancient Israel page, and the Atlas and new editions in the offering — d979d49
+- store: put the Atlas second and third in every phone listing — 7732445
+- studies: read other people's studies through the preview view (SEE-1015, 2 of 3) — b1cc41d
+- studies: read other people's studies through the preview view (SEE-1015) — fd8e0bb
+- translations: licensed edition labels, detail line and page link from the catalog (SEE-1008) — 75639e6
+- translations: put the Cepher Restatement and Cefer Biblia on sale (SEE-944) — 8a044f8
+- translations: put the Cepher Restatement on sale (SEE-944) — ae7bf8d
+- translations: switch Cefer on alongside the Cepher Restatement — 4aaea66
+- web-billing: sell the Cepher Restatement on the web (SEE-908) — b50ea71
+- web-billing: sell the Cepher Restatement on the web at $34.99 (SEE-908) — b422285
+
+### Fixed
+
+(83 raw entries — rewrite as prose)
+
+- ai: keep the Gemini key out of URLs, drop zero-numbered verses (SEE-943) — a4498f6
+- ai: stop the citation check dropping correct verses (SEE-943) — 373eea0
+- ai: the citation eval refuses bad config and stale labels (SEE-943) — 174959d
+- analytics: count a web purchase once Premium is confirmed, and spend the paywall source on it (SEE-1014) — 99f8c21
+- analytics: name the plan preview's paywall entry points (SEE-1031, SEE-1014) — 0721879
+- atlas: a click right after a touch gets the touch radius (CodeRabbit on [#1095](https://github.com/repolife/social-bible-app/issues/1095)) — dde442f
+- atlas: a tap opens the nearest place within a finger's reach (SEE-987) — ed3485d
+- atlas: centre the camera in the uncovered map; phone layout on short screens (SEE-985, SEE-988) — a9933ca
+- atlas: padding follows the keyboard and a tall foot; no panel floor (CodeRabbit on [#1094](https://github.com/repolife/social-bible-app/issues/1094)) — 952b1da
+- audio: a download the signal cut short is not Saved (SEE-1038) — 68ad49d
+- audio: list a book's chapters in the playing translation (SEE-1038) — b12b9bd
+- audio: mark a chapter still downloading as unavailable offline (SEE-1038) — 1182713
+- audio: remove downloads by moving them out first (SEE-1038) — 6876c32
+- audio: spoken labels for every play state, and the verse path's offline signal (SEE-1038) — 7c4478c
+- bookmarks: a hallmark shows once, as a selected chip — 4ca03c7
+- bookmarks: a verse shows its label in every collection it is in — 19ab701
+- bookmarks: address CodeRabbit re-review on passages (SEE-1020) — 0be20ea
+- bookmarks: address CodeRabbit review on passages (SEE-1020) — d71ba22
+- bookmarks: create a collection once, and let a failed filing be retried — e66f0a7
+- bookmarks: open the bookmark sheet only after a passage save lands (SEE-1020) — f50dbb6
+- bookmarks: removing one verse of a passage removes the whole passage (SEE-1020) — 967787f
+- catalog: point the Restatement at the file that links El`ayim, את and Yahuah — 56c7c26
+- cepher: point the Restatement at the repaired release file (SEE-980) — aceab90
+- collections: a verse filed directly sorts with label-held verses (SEE-991) — fc77fae
+- collections: address CodeRabbit review on select and reorder (SEE-992, SEE-991) — c0cf1d4
+- collections: style Remove (n) like the app's other destructive actions (SEE-992) — cbf7368
+- database: only an owner with the Restatement installed reads its books from another edition (SEE-983) — f924b2d
+- db: a preview paragraph ends at a CRLF blank line too (SEE-1015) — 0b81e4a
+- db: rebuild a preview's verse block from its reference fields (SEE-1015) — 5bc4a04
+- desktop: complete OAuth in system browser (SEE-990) — e6ed7a3
+- desktop: isolate OAuth attempts and cover callback routing (SEE-990) — 74f7081
+- desktop: use system browser for Google and Apple sign-in (SEE-990) — 47d9d68
+- discover: fall back per list on empty trending, time it with real events (SEE-1034) — efe6845
+- discover: skip malformed passages and verse references instead of failing the RPCs (SEE-1017) — 03b7a4d
+- notifications: a tapped push with no id no longer crashes the cold-start replay (SEED-SCROLL-1E) — 69a76ba
+- only an owner with the Restatement installed reads books 67–90 from another edition (SEE-983) — d048e16
+- plans: close self-enrollment bypass and resolve link enrollment (SEE-1031) — 2e2acac
+- plans: no Play All on a plan preview (SEE-1031) — 7c06369
+- production Sentry triage, null push id no longer crashes the cold-start replay (SEE-1032) — ed40187
+- reader: a long translation name no longer pushes headers out of line (SEE-542) — e9b3e9b
+- reader: announce a sync that stored records before it failed (SEE-900) — a22c00b
+- reader: bound the translation picker so its list scrolls on Android — 0430cb4
+- reader: colour the book-mode ink marker like the reader's own note dots (SEE-900) — 9508cee
+- reader: draw the book short ("Gen") in the phone header, never "Ge…" (SEE-542) — 9668457
+- reader: explain why chapters outside Strong's have no word studies (SEE-1004, SEE-979) — 4cbb031
+- reader: hide Compare while licensed access is rechecked for a new account (SEE-979) — b44ab9a
+- reader: let compare-mode verses shrink beside the verse number (SEE-1035) — 1fefcf4
+- reader: open an owner's licensed translation before checking for a rebuild (SEE-951) — 9352a90
+- reader: open the study panel, compare and sharing across the Cepher Restatement (SEE-979) — d0fd6f8
+- reader: re-measure verses after rotating back to portrait (SEE-1035) — 7bc9631
+- reader: report a failed verse-panel chapter reload instead of dropping it (SEE-951) — 64fed0f
+- reader: study the extra chapters WTL and Cefer Biblia print (SEE-1004) — f21139f
+- reader: verse text no longer cut off after rotating (SEE-1035) — 10c8aa1
+- reader: wrap the compare pane buttons instead of clipping them (SEE-542) — 8ee63f6
+- reading-plans: mark a finished plan's reminder off only once it is cancelled (SEE-1022) — 138bf21
+- reading-plans: open and answer a whole-Bible plan (SEE-1037) — b5598e5
+- reading-plans: stop a plan's daily reminder once it is finished (SEE-1022) — 443e964
+- reading-plans: whole-Bible plan opens without crashing and answers taps (SEE-1037) — 9453f23
+- restatement: expand an Enoch verse inside a study (SEE-978) — 092b505
+- restatement: fail the catalog repoint unless exactly one row moves (SEE-1009) — 159fce1
+- search: a failed history save no longer stops Strong's and AI search — 76bb5cf
+- search: AI search waits for submit and asks short topics (SEE-1044) — 339d794
+- search: AI search waits for submit, asks short topics, shows likely verses (SEE-1044) — 7147fcb
+- search: AI timeout says so instead of "no verses" (SEE-1044) — 57061c5
+- search: Ask AI answers on the first tap and starts at once (SEE-1044) — ca3a005
+- search: backspace retires the AI answer too (SEE-1044) — 10dd35b
+- search: Cepher name spellings in web search, which runs without FTS5 (SEE-978) — 5149667
+- search: Cepher names in web search, and AI search when history cannot save (SEE-978) — 2bc351e
+- seedscroll: licensed edition labels, detail line and page link from the catalog — 6f0e8a7
+- studies: a preview's copy action opens the paywall (SEE-1015) — 545a4e2
+- studies: ask for a seeded study in the reader's language (SEE-1021) — bc9f913
+- studies: keep Retry under a Restatement-only block that failed (SEE-983) — e04251f
+- studies: name Restatement-only books in public-study cross-reference titles — 9988a57
+- studies: name Restatement-only books instead of "Book 68" (SEE-983) — 9a3b14a
+- studies: read a Restatement-only block only for an owner with it installed (SEE-983) — 0a89afb
+- translations: address SEE-1008 review: fresh catalog snapshots, single-line values, a11y, web error — 718acbc
+- web: a first visit to /atlas opens the map, not onboarding (SEE-1002) — 370e8b3
+- web: generated study opens instead of staying on the form — e085bca
+- web: keep licensed bytes and key in one IndexedDB transaction (SEE-951) — 0ee9311
+- web: open a cached licensed translation before checking for a rebuild (SEE-951) — 942fb26
+- web: rail navigation gets replace, push, popToTop — 62c6f62
+- web: rail replace swaps nested tab routes, refreshes getState — ba89f52
+- web: treat SQLite code 14 as the notes-db lock (SEE-1046) — f918983
+
+*/}
 ## September 24, 2026 (web)
 
 ### Added
