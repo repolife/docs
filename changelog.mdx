@@ -4,6 +4,245 @@ description: "Recent Seed Scroll product updates."
 ---
 
 {/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.24.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.23.0...social-bible-app-v1.24.0
+   ============================================================================ */}
+
+{/*
+## October 8–15, 2026
+
+### Added
+
+(46 raw entries — rewrite as prose)
+
+- add structured Sonnet study writing with source safeguards (SEE-1053) — #1233
+- atlas: search places locally without AI (SEE-1175) — #1294
+- bookmarks: skip, relabel or correct each photo-import suggestion (SEE-1123) — #1230
+- create manual studies from reader passage ranges (SEE-1112) — #1236
+- desktop-web: present bilingual desktop download choices — 86e0fbd
+- desktop-web: resolve permanent latest installer links — 08d83d8
+- desktop: automate signed public releases after main CI (SEE-1101) — #1324
+- desktop: validate and publish installer drafts safely — 834fa78
+- discover: Verified filter on People, badges in search (SEE-756) — #1274
+- feed: open on Discover, Following second (SEE-1018) — #1257
+- ministries: launch, profile editing and teammate invites, server side (SEE-1162) — #1288
+- ministries: ministry profiles, teams and publishing as the ministry (SEE-911) — #1261
+- ministries: single-use ministry invites and the invite command (SEE-1162) — #1286
+- ministries: the invite page at /ministry/join/&lt;token&gt; (SEE-1162) — #1287
+- ministries: the ministry home checklist and Launch (SEE-1162) — #1289
+- plans: reading plans open in the plan's own edition (SEE-984) — #1276
+- reader: WEB Psalm superscriptions and Psalm 119 letters (SEE-1073) — 4853556
+- reader: WEB's own footnotes under their verses (SEE-1075) — #1242
+- search: one search box, your matches first in the Bible search (SEE-1057) — 9c9bd00
+- search: quoted phrases search exactly; web ranks phrase first (SEE-1094) — a305d84
+- search: search everything of yours, by reference or by word (SEE-1056) — 77d7486
+- search: unified search on phones, with Atlas places and journeys (SEE-1059) — #1237
+- search: unified search over your own content, web pilot (SEE-1056, SEE-1057) — 2e5ebfb
+- search: unified search screen over your own content, web pilot (SEE-1057) — 601c0ff
+- search: verse network over everything the reader creates (SEE-1055) — c0521e4
+- search: your plans, reflections and playlists in search, offline (SEE-1058) — 0eec7b0
+- search: Yours shows a count per kind, not rows (SEE-1057) — 2da9df4
+- show full numbered scripture and edit study passages (SEE-1116) — #1238
+- site: add e-Sword alternative comparison page — 0a2e7c5
+- site: add newsletter signups to a Resend audience — #1331
+- site: add operating system logos and simplify download copy — 046dc59
+- site: add unlisted Cepher edition review pages — 193be6c
+- site: align comparison branding and expand study features — 7ffbb95
+- site: cookieless page-view analytics through PostHog — 6e3b7ad
+- site: iPhone captures, 3D load-in and Atlas orbit on the homepage — #1332
+- site: offer desktop downloads that follow the latest release — fb3e12f
+- site: prepare reviewed Seed Scroll redesign for launch — #1322
+- studies: format study paragraphs with a toolbar (SEE-1115) — #1270
+- studies: search field for the Add Verse book wheel (SEE-1039) — 07949cb
+- translations: Cepher's confirmed edition names and abbreviations — a572bec
+- use Haiku for photo imports and image study notes (SEE-1124) — #1224
+- verse-image: footer in the brand faces, Cinzel and Inter (SEE-946) — #1244
+- video-studies: find where each topic and passage comes in a captioned video (SEE-902) — #1305
+- video-studies: show where a search hit is taught in the video (SEE-902) — #1306
+- web: a Plans tab on desktop web, opening in the rail — 0d127cc
+- web: finish the desktop keyboard shortcuts (SEE-899) — #1296
+
+### Fixed
+
+(159 raw entries — rewrite as prose)
+
+- a11y: Chapter Guide actions are named buttons, suggestions readable (SEE-1138, SEE-1140) — #1247
+- a11y: reference picker is a named dialog of named buttons (SEE-1136) — #1249
+- a11y: study library choices are named buttons that say which is showing (SEE-1137) — #1250
+- a11y: the study panel divider tells a screen reader where it is (SEE-1139) — #1248
+- ai: render model Markdown instead of literal asterisks (SEE-1042) — 96840a8
+- android: notification icon is the current mark, not the old logo (SEE-970) — #1241
+- annotations: keep each account's stylus annotations on its own (SEE-1168) — #1330
+- app: address partial QA for speech previews and plan sessions (SEE-1065, SEE-1085, SEE-1097) — #1266
+- app: cancel stale tours and expose book filter controls (SEE-548, SEE-1098) — #1269
+- atlas: defer overlay padding updates to avoid gesture reentry — 421f00f
+- atlas: Golgotha cites John 19:30 for "It is finished" (SEE-1143) — #1265
+- atlas: hold Simeon inside Judah's western edge (SEE-847) — #1291
+- atlas: honor the AI features switch in the Atlas guide (SEE-1119) — #1226
+- atlas: keep phone suggestions clear of keyboard controls — #1304
+- atlas: prevent map freezing after closing verse sheet — 0c7f6b5
+- atlas: stop iOS zooming the embedded Atlas on search focus (SEE-1175) — #1299
+- audio: autoplay advances one chapter on web, not two (SEE-1133) — #1240
+- audio: name the expanded player's playback controls as buttons (SEE-1091) — 210e2c6
+- audio: playlist chapter picks open on the verse they started (SEE-1078) — #1292
+- auth: stop signing Android readers out on a bad connection (SEE-1108) — deb12f3
+- bookmarks: keep deleted bookmarks deleted across devices (SEE-1107) — 611a66c
+- bookmarks: match legacy ids and serialize delete vs stale push (SEE-1107) — 5f31073
+- bookmarks: move chapters misfiled in Bible verses to Bible chapters (SEE-1120) — #1232
+- bookmarks: photo-imported verses keep their whole text and translation (SEE-1135) — #1251
+- cepher: read Cefer's own Psalm 119 letter spellings on import (SEE-1069) — 81e5234
+- cepher: show all 22 Psalm 119 headings in Cefer Biblia (SEE-1069) — 72a198b
+- compare: added translations stay for the session (SEE-1081) — fdcff44
+- compare: name each translation chip for its own passage (SEE-1079) — df2b414
+- compare: reset the primary pane's reload guard between sessions (SEE-1054) — e1d9fb6
+- compare: show Yeshua's words in gold on Compare Translations cards (SEE-1092) — 496df73
+- compare: size text to the split pane and leave the reader where it was (SEE-1054) — eb0028b
+- cross-refs: one entry per destination, counted the same (SEE-1088) — c0b8300
+- databases: report why a background install failed, and fetch the last attempt in-process on iOS (SEE-1178) — #1298
+- db: stop anon calling owner-rights functions it was never meant to — #1336
+- db: studies publish again; the publish gate reads the owner column by name (SEE-1160) — #1275
+- desktop: choosing Connections or Plans shows a hidden study panel (SEE-1127) — #1252
+- desktop: Connections follows the reader that search or a citation opened (SEE-1128) — #1253
+- desktop: gate tags on signing and complete public assets — a7044bb
+- desktop: publish signed updates from the public releases repository — d7af67f
+- desktop: publish through Doppler and prepare 1.0.1 — 7deaa71
+- desktop: publish updates to a public releases repo and sign Windows builds — 8419d5e
+- desktop: read the publishing token from Doppler — 142f899
+- desktop: verify draft releases and normalized asset names — b2ecc7b
+- grounding: name the book in scripture evidence (SEE-1053) — #1312
+- ministries: an invite opened while Seed Scroll is open shows in the open tab (SEE-1162) — #1290
+- mobile: resolve SDK-compatible SQLite in linked worktrees (SEE-1145) — #1263
+- navigation: a cold launch no longer replays spent navigation (SEE-1106, SEE-548) — #1300
+- navigation: never reopen the app on the Atlas (SEE-1106) — b53b3a2
+- notes: sync a study edited on another device down to this one (SEE-1114) — 152284d
+- onboarding: a reload no longer replays the walkthrough (SEE-548) — f048ffb
+- paywall: call the AI gates Premium, not a Creator plan (SEE-1043) — #1235
+- paywall: name Premium on the chapter guide (SEE-1043) — #1267
+- plans: a hand-built plan can pick its edition's books, Enoch included (SEE-984) — #1284
+- plans: explain on web that reminders come from the phone app (SEE-1118) — d76fdb8
+- plans: let a mixed Cepher day name its unexcerpted passage (SEE-1163) — #1335
+- plans: plan start-date screens open on web — cd4a963
+- plans: preserve imported reflections and fit discovery within worker limits (SEE-1131) — #1258
+- plans: preserve PDF imports and repair one malformed discovery range (SEE-1131) — #1259
+- plans: recover incomplete reflections and classify worker failures (SEE-1131) — #1256
+- plans: refresh the rail plan when the reader completes a day (SEE-1158) — #1271
+- plans: register the reader's destinations in the Plans stack (SEE-1111) — #1234
+- plans: require complete source-verified reading plans (SEE-1131) — #1243
+- plans: rewrite a mini-study note that breaks the format once (SEE-1163) — #1329
+- plans: send the edition on the direct reading-plan path (SEE-984) — #1277
+- plans: show a per-section Show more under cut-short plan lists (SEE-1117) — 00be3ec
+- plans: tell a reader at the daily limit so, not that the plan could not be verified (SEE-1163) — #1344
+- plans: the plan fact-check accepts edition names (SEE-1163) — #1280
+- plans: the plan preview accepts the Cepher edition's books and chapters (SEE-984) — #1278
+- plans: WTL plans keep Acts 29 and Psalm 151 on web (SEE-984) — #1279
+- profile: outlined YouTube link, Ministry badge, no person role on a ministry (SEE-911) — #1268
+- push: send a push only for a notification that exists — #1262
+- reader: a plan day opens a Cepher extra chapter from another translation (SEE-984) — #1283
+- reader: a quick click opens a verse on web (SEE-1071) — b15be26
+- reader: a translation switch keeps the picked verse with no panel open (SEE-1089) — #1293
+- reader: a translation switch keeps the selected verse (SEE-1089) — d398c5c
+- reader: draw WEB poetry as its lines (SEE-1074) — 0032298
+- reader: find Yeshua's words by aligning all of KJV, not its gold alone — 438e859
+- reader: fold header controls into a menu in a narrow web column (SEE-1070) — e541e83
+- reader: gold BSB Matthew 13:51 and Cefer's unnumbered closing replies (SEE-1066) — #1327
+- reader: gold Jesus' translated Aramaic, keep the bridge white (SEE-1097) — 2802065
+- reader: gold RV1909 "sé limpio" in Matthew 8:3 by reattaching KJV's misplaced speech number (SEE-1066) — #1343
+- reader: head Cefer's Psalm 119 sections in its own spelling (SEE-1069) — dc2196a
+- reader: keep reader and Compare clear of the landscape Dynamic Island (SEE-1179) — #1303
+- reader: make the chapter footer real buttons (SEE-1096) — a1d1d13
+- reader: open a Cepher edition before clamping the starting chapter (SEE-984) — #1282
+- reader: picking a verse with audio paused keeps it (SEE-1078) — 70cb058
+- reader: put Yeshua's words in gold accurately across translations (SEE-1065, SEE-1066, SEE-1067, SEE-1072, SEE-1092) — cd53ff1
+- reader: start curated KJV gold ranges where the speech does (SEE-1067) — da57ee8
+- reader: the first-run tour stays off a reader opened by search (SEE-1142) — #1254
+- reader: the last translation download attempt runs in-process on iOS, and a failed install names its reason (SEE-1181) — #1301
+- reader: tolerate a notes service that returns no promise (SEE-1108) — 358df92
+- reader: translate the narrow-column header menu (SEE-1070) — c5e84dc
+- reading-plans: an owned but undownloaded plan edition asks for the download (SEE-1180) — #1302
+- require supplied-source grounding for studies and search (SEE-1121) — #1229
+- restore study citation evidence and require release audits (SEE-1052) — #1227
+- saved: keep chapters out of verse label filters and Bible verses (SEE-1120) — #1225
+- saved: make collection selection rows real checkboxes on web (SEE-1122) — #1228
+- search: a Bible search pill opens on its own chip every time — #1245
+- search: accent-insensitive Spanish verse search on web (SEE-1080) — 2c0d7a8
+- search: no spelling banner over an AI answer (SEE-972) — #1246
+- search: one-chapter book ranges, and both range ends checked — e0865de
+- search: open verse ranges, explain references that don't exist (SEE-1076, SEE-1077) — aed42d5
+- search: plans and playlists found offline also open offline (SEE-1058) — 16138d3
+- search: review fixes from [#1169](https://github.com/repolife/social-bible-app/issues/1169) — 6b9f3ef
+- search: saved playlists last while offline and leave when deleted — c388b99
+- search: write verse images only into their account's notes file (SEE-1055) — d22e58c
+- search: Yours opens the text its counts came from (SEE-1057) — fc83037
+- site: capitalize accented Spanish comparison heading — 204838e
+- site: pair Cepher full and 66-book editions in publisher order — #1260
+- site: resolve desktop platform from Netlify request path — 0d3dd85
+- site: resolve desktop platform from the Netlify request path — 456a561
+- site: scope desktop styles and link all download choices — e8576cc
+- site: use complete Cinzel font for Spanish accents — 89e952a
+- strongs: keep Hebrew and Greek lookups apart, drop digit-matched pairs (SEE-1090, SEE-1098) — 7791ca3
+- studies: a malformed claim rejects only its own field (SEE-1053) — #1318
+- studies: don't warn about unsaved changes on an untouched study (SEE-1110) — 7f14438
+- studies: explain Hebrew and Greek words from Strong's, and revise rejected fields once (SEE-1053, SEE-1042) — #1337
+- studies: fail a video job clearly when its transcription times out (SEE-1053) — #1340
+- studies: fetch YouTube captions on the phone, not the server (SEE-1051) — 66d1350
+- studies: give no-caption video jobs 180 s so a slow write is not saved empty (SEE-1053) — #1342
+- studies: grounded Gemini studies no longer run out of tokens (SEE-1053) — #1323
+- studies: judge framed reflection lines by their premises (SEE-1053) — #1313
+- studies: keep passages the reader asked for when a nearby sentence is rejected (SEE-1053) — #1341
+- studies: let video studies report the speaker as unverified (SEE-1053) — #1320
+- studies: load continued references and write web video studies with the study provider (SEE-1053) — #1333
+- studies: look up word meanings from the reader's request, not a video's words (SEE-1053) — #1339
+- studies: name popular Hebrew and Greek spellings like Shavuot from a reviewed glossary (SEE-1053) — #1338
+- studies: name the study note header's icon actions (SEE-1093) — 78e22d7
+- studies: never leave a finished study unsaveable for want of a hashtag (SEE-1172) — #1334
+- studies: one Undo takes back one toolbar step (SEE-1115) — #1297
+- studies: quote whole verses and title by verified passages (SEE-1053) — #1328
+- studies: read Sonnet's answer after its thinking blocks (SEE-1053) — #1308
+- studies: say when a study search found nothing (SEE-1129) — #1255
+- studies: skip captions when an expansion already has a transcript — 75aaebb
+- studies: steer study phrasing toward checkable claims (SEE-1053) — #1325
+- studies: stop grounding hashtags, reuse whole-unit proof, give jobs 120 s (SEE-1053) — #1310
+- studies: title video studies as the speaker's unverified view (SEE-1053) — #1321
+- studies: transcribe no-caption videos before grounded writing (SEE-1053) — #1326
+- theme: make light-mode gold letters readable (SEE-1100) — dfa0c84
+- translations: keep Cepher WTL's full title as its name — 62a5061
+- verse-image: keep Psalm 119 letter labels out of passage images (SEE-1069) — a3bdcad
+- verse-image: Save on web finishes and makes the image — 5630c85
+- verse-images: Unshare takes the page down at once (SEE-1126) — #1264
+- verse-image: web export draws the selected background (SEE-1082) — d0ef987
+- web: a cross-reference gets its own history entry, so Back returns to its verse (SEE-1083, SEE-1173) — #1295
+- web: a reader route with no passage is not the passage its URL names (SEE-1083) — 534ec0c
+- web: Back always shows the screen its URL names (SEE-1083) — 4c29bb5
+- web: collection selection spacing and a single rail divider — #1272
+- web: deliver BDB and Thayer's articles on the web build (SEE-1087) — b73594d
+- web: fit onboarding and toasts to a desktop window (SEE-1109) — ccc361f
+- web: keep object route params out of the address bar (SEE-1159) — #1273
+- web: keep the reference picker's Cancel reachable at 200% zoom (SEE-1102) — 060b444
+- web: let a lexicon open after close() finishes (SEE-1087) — dd62096
+- web: print the whole study or plan, not the app screen (SEE-1104, SEE-1105) — 92ffc7b
+- web: restore deep scrolling in Strong's occurrences (SEE-1098) — #1285
+- web: show What's New as a centered dialog on desktop (SEE-1109) — 545d042
+- web: the reader reaches a Cepher edition's extra chapters (SEE-984) — #1281
+- web: the small-screen notice keeps an open reading plan (SEE-1085) — a72c62b
+- word-study: lexical meaning from the definition, not the derivation (SEE-1086) — 7eac711
+
+*/}
+{/* ============================================================================
    DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.23.0; rewrite it, then delete this block.
 
    Everything below is inside an MDX comment, so none of it renders. That is on
