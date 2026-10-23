@@ -4,6 +4,218 @@ description: "Recent Seed Scroll product updates."
 ---
 
 {/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.25.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.24.0...social-bible-app-v1.25.0
+   ============================================================================ */}
+
+{/*
+## October 15–22, 2026
+
+### Added
+
+(44 raw entries — rewrite as prose)
+
+- 261018-qvv: preserve TS2009 source formatting across readers — 8f946f4
+- 261018-qvv: read TS2009 source and embedded references — d93969e
+- 261018-qvv: register ownership-only TS2009 QA edition — 70437be
+- cepher: Cepher Millennium Edition (C-ME), dark until launch (SEE-1062) — b4d3f75
+- copy: Cepher editions carry the publisher credit on copied text — 7c4114e
+- discover: followers alone no longer qualify someone for People to follow — 8ba2d89
+- discover: invite card when People to follow runs short (SEE-1315) — d064ecd
+- discover: pull-to-refresh brings new picks (SEE-1311) — f6ae4cb
+- discover: rotate suggestions daily and weight recent reading (SEE-1301, SEE-1303) — c88873b
+- discover: widen who People to follow can suggest (SEE-1314) — 4aec472
+- family: add Family plan households, members and invite links (SEE-1216) — 08e6e9f
+- family: buy Family from a phone browser past the small-screen gate (SEE-1238) — 490d7e5
+- family: declare Family PostHog events and a server-side sender (SEE-1218) — 7fc6e48
+- family: Family Checkout for new buyers and store upgraders (SEE-1221) — fe189e4
+- family: in-place web upgrade from individual Stripe to Family (SEE-1222) — 24012f9
+- family: iOS US "Get Family" button on the paywall, behind a PostHog flag (SEE-1226) — ed92334
+- family: join flow and Member view: invite page, join, leave, 7-day and plan-ended notices (SEE-1225) — 46c9a8a
+- family: join, leave, remove and Organizer cancel edge functions (SEE-1220) — 4bfc38c
+- family: keep Members' Premium in step with the Organizer's plan (SEE-1219) — 2ae2018
+- family: Organizer screens: Settings row, members, invite sheet, remove, full and reopen (SEE-1224) — 55f2e3e
+- family: transactional emails: store-renewal steps and reminder, Member notices (SEE-1227) — 1b86468
+- family: web paywall Family toggle, upgrade screen and turn-off-renewal steps (SEE-1223) — 239e7a7
+- history: badge and markers follow the reviewed-context list (SEE-1271) — bb8df21
+- licensed: remote revocation deletes withdrawn editions from devices (SEE-893) — 1bd1601
+- licenses: a Copyright & Licenses screen, and the licensed credit at the end of each chapter (SEE-1154) — 1df09a3
+- licenses: Copyright & Licenses screen and licensed chapter credit (SEE-1154) — f6db7e3
+- licenses: picker info affordance to Translations & licenses (SEE-895) — 2547ad1
+- reader: a picker info button opens licenses on that edition — 1749299
+- reader: add private TS2009 reading and study support — 6b39733
+- reader: center the translation picker as a panel on large screens — dcca9f2
+- reader: ease Compare and immersive mode in instead of snapping — 5bd1369
+- reader: glow the word a Strong's link arrives at (SEE-1318) — fbf2e4f
+- reader: keep the verse in view while its study panel scrolls — 69a0b41
+- reader: mark the selected word on a dot tap too, and keep it visible (SEE-1318) — e25b63a
+- reader: name publishers on licensed editions in the translation picker — dca1eaf
+- reader: search-first translation picker with language tabs — 808b143
+- reader: search-first translation picker with loading motion — b5de78e
+- search: log per-stage timing for bible-ai-search (SEE-1045) — 59b6cb4
+- search: one search screen that keeps your search on Back (SEE-1254, SEE-1255) — f9f9ea1
+- search: write AI search answers with Claude Sonnet 5.5, Gemini as fallback (SEE-1169) — a0b2077
+- strongs: show the tapped verse opening while the reader loads (SEE-1318) — a558c51
+- ts2009: free licensed editions, readable by guests through the signed download (SEE-894) — 1776678
+- video: open each video where it teaches the verse (SEE-1261) — 59a394d
+- web: crawlable KJV chapter and verse pages on seedscroll.app/bible, with sitemaps (SEE-1192) — dc56c71
+
+### Improved
+
+(3 raw entries — rewrite as prose)
+
+- search: hold Gemini thinking low on search calls (SEE-1045) — b2d0fff
+- search: run the judge's checks in parallel for search (SEE-1045) — 85143bb
+- search: skip discovery when the client sent enough verses (SEE-1045) — 4ff55c5
+
+### Fixed
+
+(126 raw entries — rewrite as prose)
+
+- 261019-c6y: correct TS2009 paragraph direction and add verified speech gold — 1a2cb96
+- 261019-dg7: allow TS2009 reading plans without changing RPC contracts — ae2484b
+- 261019-dg7: enforce TS2009 quotation limits and exported credit — c694b64
+- ai-study: label KJV quotations for readers of another edition (SEE-1266) — cdf4818
+- auth: let a reader in when the reset password is already theirs (SEE-1289) — a40ad36
+- billing: compare full price and portal copies before reuse (PR 1402 review) — 99cf005
+- billing: skip archived portal copies so a rerun can replace one (PR 1402 review) — 80f576b
+- billing: stop before copying a portal that allows plan switching — 8b36754
+- billing: tighten the sandbox setup's guards (PR 1402 review) — d834e7c
+- bookmarks: refresh saved lists after sync (SEE-1242) — 113e871
+- cepher: address review on the Millennium Edition (SEE-1062) — caeeef8
+- cepher: drop Studio's Markdown emphasis from Millennium headings (SEE-1062) — 81c287e
+- cepher: never name an unreleased edition on public screens (SEE-1062) — 8ba9b5e
+- discover: a failed pull keeps the rows already shown — e63ea0c
+- discover: only say Link copied when the browser took it — 3b4abb5
+- discover: whole study for Premium readers and the author from get_for_you and get_trending — #1352
+- enforce TS2009 quotation rules, show licenses, and allow plan saves — 44fcbe1
+- family: fail closed without RevenueCat, confirm Family on the household (SEE-1221) — 65c169e
+- family: free the upgrade button when Back restores the page from cache (SEE-1223) — c12034a
+- family: gate the phone invite, refresh Settings after a join, let grant-only Members buy (SEE-1225) — 3906074
+- family: give a Member's own promotional Pro back on leave, removal and plan end (SEE-1244) — 6e46822
+- family: honor the phone sign-in note only on a provider return, and keep the plan (SEE-1238) — db5ad47
+- family: lazy Sentry in the app cancel, safer post-write lookups, Stripe paging (SEE-1220) — 77a0c43
+- family: no reminder promise in late steps; time out Resend after 10 s (SEE-1227) — 2abf6b1
+- family: open the Family screen in the desktop web rail (SEE-1243) — 7f318f2
+- family: phone Back leaves the page; keep the return page mounted on profile refresh (SEE-1238) — 2dc6f9c
+- family: phone Family pages only where the web sells Family (SEE-1238) — 750e978
+- family: re-read the storefront per paywall, keep only the newest family read (SEE-1226) — 259dff2
+- family: refuse a concurrent second join as already_in_family; prove the race test waits on the lock (SEE-1216) — c9e289d
+- family: report a refused removal and a failed clipboard write (SEE-1224) — b7bcb9b
+- family: retry the upgrade's RevenueCat receipt post on 429 (SEE-1222) — 5d396a5
+- family: say to write to us when RevenueCat and Stripe disagree about a plan (SEE-1280) — 2cbd53c
+- family: tell RevenueCat about an in-place upgrade (SEE-1250) — 401054d
+- gold: Restatement gold from KJV; C-ME response after a finished speech stays plain (SEE-1262) — bd1fd1b
+- gold: Restatement reads gold from KJV; a finished speech keeps its response plain (SEE-1262) — e8c06ad
+- history: label unreviewed Spanish summaries as AI, and keep showing them on a later visit — 70ed3e3
+- licensed: a failed KJV reload after a revocation reaches the error screen — 48ab8d9
+- licensed: a withdrawn edition never renders, even from cache or at launch — 13229e5
+- licensed: removal waits out a background refresh before deleting — 3701ce9
+- licensed: withdrawn editions leave in-flight loads and Compare panes too — 6945751
+- licenses: resolve the nested ProfileTab route from the Bible stack — b3849b8
+- licenses: use full WTL copyright notice (SEE-1154) — 1f4df4a
+- licenses: Visit site as a text link, so cards with one don't carry a button's empty height — 4baac77
+- plans: C-ME plan picker uses the edition's own supplement verse counts (SEE-1265) — b71f22d
+- plans: use C-ME's own verse counts for supplement works (SEE-1265) — d73d663
+- privacy: say plainly that phone-only recordings keep their transcript off the account too — cf351fa
+- quick-261019-dg7: refresh account-scoped TS2009 copyright notice — 71b2ddb
+- reader: a newer route drops a Strong's arrival still waiting to land (SEE-1318) — 70b96ab
+- reader: clear the old word when a route opens the panel without one (SEE-1318) — 3cdba62
+- reader: complete TS2009 study and comparison integration — a946cbb
+- reader: correct TS2009 Hebrew layout and speech highlighting — 9546bfc
+- reader: forward web initialization download progress — 0200d0a
+- reader: gold letters for Cepher Millennium (SEE-1262) — 07c3624
+- reader: gold letters for Cepher Millennium, read from KJV (SEE-1262) — dc8e9e8
+- reader: hold still until the reduce-motion setting is known — 9fed3fb
+- reader: hold the chapter-load fade still under reduced motion — a0430ba
+- reader: hold the picker panel's height steady while filtering — f5ad637
+- reader: keep a Strong's arrival's study when its chapter loads again (SEE-1318) — 2ccf518
+- reader: keep picker rows readable with long names, prices, publishers — b2d4867
+- reader: licenses narrows to the edition again on each visit — 1fc56b6
+- reader: margin the picker panel inside the viewport — 3bd9311
+- reader: one entrance when Compare opens, none after reduced motion turns on — 0e021fb
+- reader: one Strong's dot per word, stepping through its definitions (SEE-1296) — 0c43077
+- reader: picker loads with motion, and a typed space no longer closes it — 70feda2
+- reader: remember the tapped word by position, not group object (SEE-1296) — 009dda2
+- reader: report translation download progress (SEE-1233) — f84c534
+- reader: run the picker panel the window's full height — 28164c5
+- reader: show translation download progress (SEE-1233) — 1de31de
+- reader: Strong's list returns to the reader and keeps the arrival's study (SEE-1318) — 2256419
+- reading-plans: disclose AI plan days written without the reading's text (SEE-1267) — 39cee13
+- safety: drop the propaganda and harmful-material word lists, which blocked studies about persecution and addiction — ec5de8d
+- safety: redact contact details from the saved study sent to AI, and still block threats against a named group — a91d1dd
+- safety: stop blocking studies that quote scripture about death and judgment — 6d60b40
+- search: count loaded verses, not coordinates, before skipping discovery — 2f86489
+- search: keep Hebrew-leading TS2009 cards LTR (SEE-1235) — e6a0189
+- search: never follow a redirect on the Claude request — 81bb890
+- search: study Back returns to search; Transcriptions search opens on All (SEE-1254) — 8255e67
+- search: trace a deadline that cut off hydration as deadline — c2068b2
+- SEE-1154: open licenses from reader credits — 4c48432
+- SEE-1154: open translation licenses from reader credits — d3e2536
+- SEE-1154: show full WTL licenses notice — 33213ca
+- SEE-1240: exclude citations after sentence punctuation — bc6e9a6
+- SEE-1240: exclude publisher citations without closing quotes — bf1fe7b
+- SEE-1240: handle period-separated publisher citations — ce9269c
+- SEE-1242: refresh saved bookmarks after sync — 0716ef2
+- SEE-1246: restore Copy and Share button semantics — ef8cf18
+- SEE-1246: restore keyboard activation for verse Copy and Share — 84421ad
+- SEE-1247: preserve study passage when selected edition lacks it — a65593d
+- SEE-1247: preserve study verse destinations across editions — 08d1c1f
+- SEE-1247: verify exact verse before choosing study edition — 2ec05b3
+- SEE-1248: allow verified web Bible fallback after notes failure — 07e7ea6
+- SEE-1248: make web Bible setup recovery truthful — a9d25f2
+- SEE-1248: show truthful web setup recovery — 75d83e1
+- SEE-1249: make public study URLs reopenable — 2e6e75a
+- SEE-1249: serialize pending nested public-study targets — 43dd546
+- SEE-1249: serialize stable public study URLs across stacks — 0dc7417
+- site: list the passages and references we add among what AI providers receive — 8b69d3c
+- site: passages are the AI's only sources, not the only thing sent; name recording audio — 9dd4d3e
+- strongs: go back to the reader below instead of stacking a new one (SEE-1318) — 02578cd
+- studies: add STUDY_GROUNDING=off to skip the study checker, and answer typed questions from Scripture (SEE-1053) — bb6e3bb
+- studies: fetch a preview row again on the detail screen whatever the store says — #1353
+- studies: keep the verse citation check when the source checker is off (SEE-1053) — e626179
+- studies: switch to turn the study checker off, and answer typed questions from Scripture (SEE-1053) — 0e4ef64
+- study-pdf: name the edition, print the verbatim licensed credit (SEE-805) — aef1959
+- study: label nested KJV quotes in straight single quotes (SEE-1266) — 458de70
+- transcription: drop text whisper invents in silence (SEE-1316) — 4e746e7
+- transcription: fresh speech levels for each recording (SEE-1316) — 05276ab
+- transcription: recover failed speech-model downloads (SEE-1185) — 9ab8f06
+- transcription: recover speech-model downloads and show retry errors — 24f8ec8
+- ts2009: count an edition free only while its row is active (SEE-894) — b40b7f5
+- ts2009: editorial citations stay regular inside ongoing speech (SEE-1240) — e2f46ba
+- ts2009: editorial citations stay regular, range gold in saved studies (SEE-1240, SEE-1236) — d78b856
+- ts2009: keep editorial citations regular, restore range gold in saved studies — 08bb419
+- ts2009: keep the sentence period after a mid-sentence citation gold (PR 1403 review) — 518e604
+- ts2009: localize quotation refusals, name share failures — 8307860
+- ts2009: no one-time-purchase line on a free edition (PR 1404 review) — ed32cff
+- ts2009: treat any book-labelled citation as editorial, whatever leads it (SEE-1240) — 31774f8
+- verse-image: credit and cap Cepher Millennium and Restatement images (SEE-1263) — 0bb69e3
+- verse-image: web download survives a full storage quota (SEE-1239) — 2c1dbbe
+- verse-panel: history badge agrees with the prepared cache (SEE-1268) — 374df8f
+- verse-panel: keep history badge marks in step with the current lookup (SEE-1268) — f658631
+- video: skip channel lookups for verse cards with no moment (SEE-1261) — 73f8bdb
+- web: grow the OPFS pool so notes never lock out a browser (SEE-1256) — be20762
+- web: keep the reader header off the browser toolbar below desktop width — eded760
+- word-study: variant-spelling openers stay derivation, not meaning (SEE-1086) — aa56e72
+- search: leave Gemini thinking at its default (SEE-1045) — 5a2d9c6
+
+*/}
+{/* ============================================================================
    DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.24.0; rewrite it, then delete this block.
 
    Everything below is inside an MDX comment, so none of it renders. That is on
