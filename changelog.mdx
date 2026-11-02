@@ -4,6 +4,172 @@ description: "Recent Seed Scroll product updates."
 ---
 
 {/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.26.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.25.0...social-bible-app-v1.26.0
+   ============================================================================ */}
+
+{/*
+## October 22–November 2, 2026
+
+### Added
+
+(43 raw entries — rewrite as prose)
+
+- app: offer Premium in What's New, and a /premium web route (SEE-1345) — fa77eb7
+- app: Upgrade to Premium in What's New + /premium web route (SEE-1345) — bc904f6
+- atlas: the guide bar offers the 7-day trial to free readers (SEE-1352) — #1525
+- billing: 7-day Pro free trial at web checkout for first-time subscribers (SEE-1350) — #1534
+- bookmarks: highlight chosen words of a verse — #1535
+- cepher: Cefer Edición del Milenio (C-EM), dark until launch — #1511
+- cepher: Cepher Millennium Bible (Abridged) (C-MEA), dark until launch — 6c7b689
+- cepher: put the Cepher Millennium Edition on sale (SEE-1259) — #1446
+- compare: the TR in Compare, Word by word, and where a translation is shorter (SEE-1338) — c56d280
+- desktop: our own install screens on Windows and macOS — bff9906
+- lexicon: pinch to zoom the BDB and Thayer's article, through the reader's text size (SEE-1373) — #1538
+- licenses: link Cepher editions to the editions guide — 63b99ec
+- paywall: Pro 7-day free trial on iOS and Android (SEE-1348) — #1519
+- plans: Download on the plan's "Download needed" alert (SEE-1184) — c417053
+- premium: shared Premium prompt, Ask AI and AI study shown to free readers (SEE-1351) — #1520
+- premium: show free readers three hidden Premium features (SEE-1353) — #1526
+- purchases: set the account email on the RevenueCat customer (SEE-1336) — cf10521
+- reader: a second tap on a book in the picker goes to it (SEE-1342) — ccc9fa4
+- reader: chapter and verse slots open their own dropdowns (SEE-1342) — 97cec63
+- reader: explain partial Strong's coverage and the KJV-based count badge (SEE-1360) — #1532
+- reader: Greek Textus Receptus, staging-only via the catalog (SEE-1338) — a3a0588
+- reader: interlinear view for the Greek TR (SEE-1338) — 78f2a6e
+- reader: the Greek Textus Receptus as a catalog edition, staging-first (SEE-1338) — d38314a
+- search: SEARCH_GROUNDING=off shows the writer's answer the 1.23 way — bbb4a8f
+- site: Family plan page with pricing, setup steps and FAQ (SEE-1228) — 6692ad6
+- site: Family plan page with pricing, setup steps and FAQ, linked from pricing (SEE-1228) — 821dfe7
+- site: list The Scriptures 2009 among the included translations — 48db3c7
+- site: list TS2009 as included and C-ME as a Cepher purchase — ba9c500
+- site: name the Cepher Millennium Edition among the Cepher purchases — 3272b84
+- site: Premium page in English and Spanish (SEE-1345) — cdc6752
+- site: Spanish Atlas page at /es/map-of-ancient-israel — 46b8fd6
+- studies: full-screen button on a study, web and desktop only (SEE-1343) — 7751c25
+- studies: say what deleting the app loses, in the local-save notice and marker sheet (SEE-1365) — #1523
+- studies: show word highlights on saved verse cards — #1536
+- studies: tell free readers a study stays on this phone, and mark it (SEE-1354) — #1522
+- studies: the saved-on-this-phone notice on every way a free reader makes a study (SEE-1355) — #1524
+- tr: build the Textus Receptus reading database (SEE-1338) — 7d5c70c
+- verse-panel: clear lexicon download status on web, and a faster first download — 6a424a9
+- verse-panel: say clearly on web that the lexicons are downloading — 62e9390
+- word-study: a plain line above the lexicon, and a remembered Strong's fold — 4ede515
+- word-study: lexicon first, Strong's definition folded under it — 324f1cd
+- word-study: Strong's short meaning first, expanding in place — b6863e8
+- word-study: Strong's short meaning first, expanding in place, lexicon after — 8bd202e
+
+### Improved
+
+(1 raw entry — rewrite as prose)
+
+- web-db: give a lexicon download the connection over the interlinear prefetch — 465c9a4
+
+### Fixed
+
+(83 raw entries — rewrite as prose)
+
+- ai-study: keep studies from naming the edition of app-rendered cards (SEE-1361) — #1531
+- annotations: full storage no longer stops stylus sync-down (SEE-1321) — 05e0107
+- app: keep Hebrew-leading English Scripture LTR on Android (SEE-1235) — f27ac81
+- app: keep What's New open until navigation can reach the Paywall (SEE-1345) — 5bff3a4
+- auth: report an exchange failure that lands after the unfinished warning — 6e6733a
+- auth: say so when a web sign-in callback cannot finish — a298c2b
+- bdb: keep articles tagged with several Strong's numbers, open the right half of BDB (SEE-1326) — f3b641b
+- book-view: mark each Android line after a break LTR (SEE-1235) — 6550a0c
+- bookmarks: name a saved chapter's edition by its reader label (SEE-1364) — #1529
+- cepher: cut C-EM's back matter off Revelation 22:21 and mend its gold (SEE-1358, SEE-1359, SEE-1363) — #1527
+- cepher: give C-EM's 18 unnumbered verses their own row — #1521
+- collections: keep a collection's scroll place on Back (SEE-1130) — ae9d5ca
+- collections: restore before paint and yield to the reader's scroll (SEE-1130) — 1bf6537
+- compare: shorter note only beneath loaded text (PR 1509 review) — 0758a23
+- compare: show a book an edition does not print as unavailable (SEE-1362) — #1528
+- i18n: Spanish save notice says esta computadora and esta tableta (SEE-1354) — #1533
+- interlinear: fresh layouts per chapter, reveal the inline panel (PR 1507 review) — dcaa565
+- interlinear: reading position and verse jumps, plain chips without Strong's (PR 1507 review) — f9f37dd
+- licenses: "Credit" instead of "Required credit" — fc71457
+- licenses: label the credit line "Credit", not "Required credit" — 3ae5cdb
+- licenses: link English Cepher editions to the guide that lists them — f4a213e
+- notes-db: give hashtags its color column whichever service sets it up first (SEE-1333) — 9e938a9
+- notes: a failed switch cannot let two setups overlap (SEE-1165) — b4237eb
+- notes: an account switch mid-setup no longer hangs every notes open (SEE-1165) — 3957316
+- plans: a chapter that lands settles a routed passage it replaces (SEE-1184) — 6d8c85f
+- plans: a plan's edition stays in its reader, not app-wide (SEE-1170) — c7ceccb
+- plans: Retry after a failed edition download opens the plan day (SEE-1184) — db8afb3
+- plans: the plan banner names the day the reader opened (SEE-1167) — f3dd9ec
+- purchases: allow WTL and Cefer Test Store product ids — b6f3220
+- reader: a restoring session never replays the walkthrough (SEE-1183) — c017639
+- reader: arrival glow keeps 4.5:1 on gold speech in dark sepia (SEE-1318) — 26c464b
+- reader: book mode clears the landscape Dynamic Island (SEE-1182) — 708a370
+- reader: chapter grid stays on screen after choosing a book — 87981ba
+- reader: chapter/verse dropdown stays put while it closes — #1516
+- reader: show download progress when switching to an edition not on the device — 554061a
+- reader: verse jump on web lands on the picked verse with Study tools open — f488be6
+- red-letter: end gold at the speech's sentence end, not the narrator's next word (SEE-1007) — 4ff35d1
+- red-letter: end Revelation 22:7's gold at KJV's colon (SEE-1007) — 76540f7
+- revenuecat-webhook: record a revoke that finds no entitlement row (SEE-1335) — 5a4822d
+- revenuecat-webhook: settle a translation revoke with nothing to revoke (SEE-1335) — 0d4e918
+- saved: Back from a bookmark returns to its list (SEE-1130) — 2b8f430
+- scripture: keep caller styles flat and paper fonts in ScriptureText (SEE-1235) — 3e353e3
+- scripture: keep Hebrew-leading English paragraphs LTR (SEE-1235) — 2d658d9
+- scripture: mark Hebrew-leading word units and in-verse poetry lines LTR on Android (SEE-1235) — 7585adb
+- search: likely matches stay in the reader's translation (PR 1504 review) — 41ad54a
+- search: plain wording when no AI explanation passes the checks — 9d3cbc3
+- search: SEARCH_GROUNDING=off switch and plain fallback wording — 3fcffc0
+- shortcuts: Escape that leaves full screen no longer closes the study panel (SEE-1343) — #1540
+- site: address website audit findings — #1514
+- site: return Cepher brand links to the homepage — cf486ae
+- site: social card shows the official Seed Scroll logo — 58b3665
+- site: social card shows the official Seed Scroll logo instead of a placeholder S — d8b4092
+- site: write 1278 without a separator in Spanish, describe the tribes map accurately — 23ee28b
+- strongs: open the reader on top of the list so swipe back returns to it (SEE-1318) — 849d58e
+- strongs: swipe back from the reader to the Strong's list (SEE-1318) — 87bc84b
+- studies: keep a new manual study's edition after the reader switches (SEE-1331) — fefffad
+- studies: save a new manual study's edition so it survives a reader switch (SEE-1331) — 7f8b41a
+- study: number one-row ranges, keep range text when enrichment stalls — 9f1fa90
+- study: one line per verse in a saved range card (SEE-1324) — d1ad5f7
+- study: set a verse range with the reader's inline numbers — 9d2eb44
+- study: show a saved verse range as numbered rows like the editor — 430df4a
+- study: show range text before its inline verses finish loading — 5c85673
+- stylus: keep and upload new ink when browser storage is full (SEE-1321) — c54b839
+- stylus: say held ink is saved only after the upload succeeds (SEE-1321) — 1f7be3f
+- sync: upload studies that never synced, on upgrade and after AI/Parse saves (SEE-1349) — #1518
+- tr: byz_lacks counts true omissions only, by TAGNT's significance marks (PR 1509 review) — cbd76aa
+- tr: no language prompt, KJV likely matches, folded Greek phrases (PR 1504 review) — 275720a
+- web-db: fetch the sql.js wasm before initSqlJs so a failure stays retryable — c3d896d
+- web-db: forget a failed sql.js load so Retry fetches the wasm again (SEE-1334) — 9438676
+- web-db: Retry reloads the sql.js wasm after a failed load (SEE-1334) — 10ce373
+- web: a purchase screen can always get back to the reader (SEE-1395) — #1542
+- web: cap add-to-study and bookmark dialogs at a dialog width on desktop — 1d8855f
+- web: pasted search and reading plan links open what they name (SEE-1370) — #1537
+- web: refresh the desktop rail study after an editor save (SEE-1368) — #1530
+- web: reload the PWA offline from a service worker (SEE-1134) — c44df04
+- web: sell Cepher Millennium Bible (Abridged) on the web — #1515
+- whats-new: announce a held-back edition once its row goes live (SEE-1322) — 3e393e8
+- whats-new: announce an edition only once its catalog row is live (SEE-1322) — b5dc6c3
+- word-study: 25 more lexical meanings instead of a sentence built from the letters — d843963
+- word-study: keep parenthetical renderings whole, and a late read from undoing the reader's fold — f417778
+- word-study: lexical meaning skips derivation notes and quotes connectives — 80e8267
+- word-study: open a Strong's verse beside the desktop reader without stalling (SEE-1330) — d7bdce9
+- word-study: quote a connective-only gloss list before ordinary meanings — 0b43841
+
+*/}
+{/* ============================================================================
    DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.25.0; rewrite it, then delete this block.
 
    Everything below is inside an MDX comment, so none of it renders. That is on
