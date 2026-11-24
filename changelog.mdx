@@ -4,6 +4,119 @@ description: "Recent Seed Scroll product updates."
 ---
 
 {/* ============================================================================
+   DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.28.0; rewrite it, then delete this block.
+
+   Everything below is inside an MDX comment, so none of it renders. That is on
+   purpose: this is raw material, not copy. The entries are Conventional Commit
+   subjects written for developers. The page around them is prose written for
+   readers — full sentences, saying what a person can now do. Do not paste these
+   through.
+
+   To finish it:
+     1. Check the date range below is the one you want.
+     2. Rewrite the entries you would tell a reader about as prose, under the
+        Added / Improved / Fixed headings, matching the sections beneath.
+     3. Drop anything internal — most refactors, most CI, anything a reader
+        cannot see.
+     4. Move the finished section above this block and delete the block.
+
+   Source: https://github.com/repolife/social-bible-app/compare/social-bible-app-v1.27.1...social-bible-app-v1.28.0
+   ============================================================================ */}
+
+{/*
+## November 14–24, 2026
+
+### Added
+
+(34 raw entries — rewrite as prose)
+
+- ai-connections: bookmark and collection tools (SEE-1420) — 4de226a
+- ai-connections: reading plan tools (SEE-1420) — d7a64bb
+- ai-connections: study note tools (SEE-1420) — 11dd9d9
+- atlas: on a phone the controls fit in fewer rows and can be put away (SEE-1482) — 44dd2c2
+- atlas: the Exodus journey says at Sinai that its site is uncertain (SEE-1475) — ff23fef
+- audio: download any book, or the whole Bible, and resume after a relaunch (SEE-1507) — 04f8475
+- companion-lab: compare answers with other apps — e0ff22b
+- companion-lab: fold the sources and show the top five first — 1b16223
+- companion-lab: saved runs and reruns — 712c617
+- companion: a staging-only test page for the Companion (SEE-1408) — b4a439c
+- companion: answer about the idea, trace every verse, find words by English (SEE-1408) — 6237832
+- companion: BDB, Thayer's and the interlinear; fill Strong's blanks — ccfc78c
+- companion: draft prompts to ask and rerun with on the test page — 4e5cd54
+- companion: Easton's, Atlas places and cross references — 18a3452
+- companion: follow a story to where Scripture picks it up again — 1a60c34
+- companion: full Matthew Henry and JFB commentaries — 72179cf
+- companion: page through find_words results, keep word meanings fair — d77a5b2
+- companion: read and save to the reader's account — 49d5876
+- companion: readable answers, clean source numbers, language connections — bc8e43a
+- companion: readable answers, clean source numbers, language connections (SEE-1408) — 2d0a46a
+- companion: search the KJV by its wording — 2287ddf
+- companion: show who asked each saved run — 677c3bf
+- companion: Spanish answers quote the Reina-Valera 1909 — 3838498
+- concordance: how a word is translated, and where it is used (SEE-1485) — 7b37c78
+- editions: hidden qa_fixture edition for staging QA fixtures — a1e390b
+- editions: read each edition's verse pairing from its own database (SEE-1491) — 3d663a3
+- editions: read which books an edition prints from its own database (SEE-1490) — ef2a23b
+- lbla: build La Biblia de las Américas with Lockman's own gold (SEE-1472) — fe065b3
+- lbla: La Biblia de las Américas with Lockman's own gold (SEE-1472) — 496d120
+- lockman: NBLA and NASB 1995 with Lockman's own gold (SEE-1473, SEE-1471) — a53deb9
+- notifications: a daily verse picked from the reader's own activity (SEE-1501) — 56e980c
+- reading-plans: import schedules up to 1,095 days for a three-year cycle (SEE-1477) — 86b096f
+- reading-plans: template import takes book names and stops at 1,095 days (SEE-1477) — 59dee10
+- translations: import playbook and scorecard gates for new editions — 6090d69
+
+### Fixed
+
+(45 raw entries — rewrite as prose)
+
+- ai-connections: check new study blocks against the assistant's read — 8b2d9ae
+- ai-connections: plan tools respect blocks and keep read dates (SEE-1420) — 66535c2
+- ai-connections: stop deleted collections coming back (SEE-1420) — f0669a7
+- bookmarks: side paths pair bookmark verses by words, not raw number (SEE-1498) — 7a18fbe
+- companion: carry the account mark forward and clear the lab on account switch — 252b12c
+- companion: do not page a find_words search with missing books — 670045a
+- companion: honest search limits, Markdown emphasis boundaries, fresher sources — 73f0ad1
+- companion: keep a draft save locked and a later choice in place — acd3b70
+- companion: keep account runs private and report saves when the reply fails — b7db149
+- companion: lock a verdict while it saves, isolate the flag test — b9a22b1
+- concordance: scroll the chips with the verses (SEE-1485) — 496b2b4
+- editions: an edition this build does not know is never read as KJV unsaid (SEE-1493) — 98163c0
+- editions: reading plans and search for every edition, checked each time — 8b3dacd
+- lbla: keep a heading above the first verse; steady a flaky refresh test — ee3755e
+- lockman: 3 John 1:15 can be picked and typed (SEE-1472) — 8bde117
+- notes: a quick reflection stays on the same words in every edition (SEE-1496) — 2640c82
+- notifications: lead the verse of the day alert with its reference and edition (SEE-1501) — 56872c2
+- notifications: name the quoted edition in the verse of the day alert (SEE-1501) — 4afc159
+- plans: a moved plan target is followed by the verses it holds (SEE-1498) — f1dd024
+- plans: a plan day's verse range highlights the same words in every edition (SEE-1498) — 58816e0
+- reader: every edition navigates by its own verse numbers (SEE-1472) — 20545e0
+- reading-plans: bring the 1,095-day import and editor fixes to main for 1.28 (SEE-1477) — d9130a6
+- reading-plans: check a parsed schedule's references without reading the chapters (SEE-1476) — 302f3a8
+- reading-plans: import numbered schedules written as ordinary references (SEE-1476) — b97b6e9
+- reading-plans: import published schedules as written, up to 1,095 days (SEE-1476, SEE-1477) — 835e083
+- reading-plans: keep a plan job moving when nobody is polling it (SEE-1506) — ad27999
+- reading-plans: read a long plan as one version; read before removing a day (SEE-1477) — 3008d6d
+- reading-plans: read every day of a plan past 1,000 rows (SEE-1477) — e10e66c
+- reading-plans: read the customer's CSVs right: columns by name, day,reading rows (SEE-1476) — 87956ef
+- reading-plans: refuse a stale editor save with 409, not a retried 40001 (SEE-1500) — 95b8f8c
+- reading-plans: refuse an editor save over a plan saved elsewhere (SEE-1500) — 9d84eec
+- reading-plans: save an imported template's days in one transaction (SEE-1477) — 56fe2da
+- reading-plans: the editor offers nothing to save until the plan loads (SEE-1477) — c7ca658
+- search: the verse network pairs verses by words, in KJV's numbers (SEE-1499) — 302ee3b
+- strongs: an edition without its own tags lists KJV's hits by their words (SEE-1498) — 714b165
+- strongs: restore twelve blank Greek definitions — 4054b2f
+- studies: fallback-edition reading, stale indicator loads, joined-verse appends (SEE-1497) — 9c1036a
+- studies: joined-verse editor picks and overlapping blocks (SEE-1497) — 35f9213
+- studies: refresh the verse panel's studies after a save (SEE-1497) — bc5c915
+- studies: study dots and panel match the verse in the study's own edition (SEE-1497) — 543682f
+- translations: scorecard review fixes — fa3542e
+- votd: failed settings reads, unreported account, passed slots, half-done sign-out (SEE-1503) — b9023f5
+- web-db: time a download's stalls, not the whole file (SEE-1505) — 4618f11
+- whats-new: gate each Lockman edition on its own row (1.28.0) — 8e41ba2
+- whats-new: gate each Lockman edition on its own row, and remember Spanish holds — 0d68143
+
+*/}
+{/* ============================================================================
    DRAFT — NOT PUBLISHED. Generated for social-bible-app-v1.27.0; rewrite it, then delete this block.
 
    Everything below is inside an MDX comment, so none of it renders. That is on
